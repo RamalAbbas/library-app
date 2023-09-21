@@ -1,7 +1,12 @@
 @import './font.css';
 *{
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Montserrat;
+}
+
+.container{
+    padding-left: 14.93%;
+    padding-right: 5.90%;
 }
