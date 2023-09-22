@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./src/assest/styles/footer.css">
     <link rel="stylesheet" href="./src/assest/styles/media.css">
     <script defer src="./src/assest/js/modal.js"></script>
+    <script defer src="./src/assest/js/hamburger-menu.js"></script>
 </head>
 <body>
     <header class="container" id="header">
@@ -70,8 +71,41 @@
             </div>
 
             <div class="header_mobile_body">
-                <div class="header_menu">
+                <div id="header_menu" class="header_menu">
                     <img src="./src/assest/icons/menu/menu.svg" alt="">
+                </div>
+                <div id="overlay" class="overlay">
+                    <img id="close_icon" class="close_icon" src="./src/assest/icons/menu/close.svg" alt="">
+
+                    <div class="menu_list">
+                        <ul class="menu_nav">
+                            <li class="menu_item">
+                                <a href="">
+                                    Акции
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="">
+                                    О магазине
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="">
+                                    Каталлог
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="">
+                                    Доставка
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="">
+                                    Блог
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
