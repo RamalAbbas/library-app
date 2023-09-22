@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assest/styles/global.css">
     <link rel="stylesheet" href="../assest/styles/header.css">
     <link rel="stylesheet" href="../assest/styles/footer.css">
+    <script defer src="../assest/js/modal.js"></script>
 </head>
 <body>
     <header class="container" id="header">
@@ -44,10 +45,26 @@
             </ul>
 
             <div class="header_authentication">
-                <button  class="header_join-btn">
+                <button id="join-btn" class="header_join-btn">
                     <img src="../assest/icons/authentication/user.svg" alt="">
                     Join us
                 </button>
+            </div>
+            <div id="modal_body" class="modal_body">
+                <div class="modal_main">
+                    <p class="modal_head_title"> 
+                        Join Us
+                    </p>
+                    <form class="modal_form" action="">
+                        <div class="modal_form_input_group">
+                            <input placeholder="Full name" class="modal_input" type="text">
+                            <input placeholder="Email" class="modal_input" type="text">
+                        </div>
+                        <button class="modal_join_btn">
+                            Join
+                        </button>
+                    </form>
+                </div>
             </div>
         </nav>
     </header>

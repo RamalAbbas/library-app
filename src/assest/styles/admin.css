@@ -1,0 +1,98 @@
+/* admin login start */
+
+.admin_login{
+    width: 100%;
+    height:100vh;
+    background: #720418;
+    display: flex;
+    flex-direction: column;
+    padding: 74px 0px 0px 35px;
+}
+
+.admin_login_main{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.admin_login_form{
+    background: #FFF;
+    padding: 69px 54.33px 34.7px 54.33px;
+    width: 45.97%;
+}
+
+.admin_login_head_title{
+    color: #000;
+    text-align: center;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom:  17px;
+    height: 81px;
+}
+
+.admin_input_group{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    margin-bottom: 84px;
+}
+
+.admin_login_input{
+    width: 100%;
+    height: 74px;
+    border: 1px solid #CECECE;
+    background: #FFF;
+    padding: 18px 0px 18px 51.64px;
+
+    /* inputun daxilindeki textin stylesi */
+    color: #797667;
+    font-family: Crimson Text;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.admin_login_input::placeholder{
+    color: #797667;
+    font-family: Crimson Text;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_join_btn{
+    width: 100%;
+    height: 74px;
+    border-radius: 5px;
+    border: 1px solid #CECECE;
+    background: #E16A00;
+
+    /* daxilindeki textin stylesi */
+    color: #FFF;
+    font-family: Crimson Text;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+/* admin login end */
+
+.admin_body.show .admin-panel{
+    display: flex !important;
+}
+.admin_body.show .admin_login{
+    display: none;
+}
+
+/* admin panel start */
+.admin-panel{
+    display: none;
+}
+/* admin panel end */
