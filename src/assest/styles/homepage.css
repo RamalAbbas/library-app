@@ -1,0 +1,39 @@
+body {
+    font-family: var(--fontMontserrat);
+    background-color: var(--mainColor);
+}
+
+main {
+    color: var( --fontColor);
+}
+
+h3, h4, h5, h6 {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 196.187%;
+}
+h3 {
+    color: black;
+}
+.delivery-sec {
+margin: 64px;
+}
+.delivery-sec p {
+    margin-top: 42px;
+}
+.media-section {
+    margin-top: 70px;
+    padding-bottom: 70px;
+}
+.media-logos {
+    margin-top: 22px;
+    margin-bottom: 63px;
+}
+.media-logos a {
+    margin: 27px;
+}
+.astore-num {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 196.187%;
+    }
