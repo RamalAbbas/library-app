@@ -130,3 +130,7 @@ header{
     line-height: normal;
     cursor: pointer;
 }
+
+.header_mobile_body{
+    display: none;
+}
