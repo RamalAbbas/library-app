@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../assest/styles/global.css">
     <link rel="stylesheet" href="../assest/styles/header.css">
     <link rel="stylesheet" href="../assest/styles/footer.css">
+    <link rel="stylesheet" href="../assest/styles/media.css">
     <script defer src="../assest/js/modal.js"></script>
+    <script defer src="../assest/js/hamburger-menu.js"></script>
 </head>
 <body>
     <header class="container" id="header">
@@ -50,20 +52,42 @@
                     Join us
                 </button>
             </div>
-            <div id="modal_body" class="modal_body">
-                <div class="modal_main">
-                    <p class="modal_head_title"> 
-                        Join Us
-                    </p>
-                    <form class="modal_form" action="">
-                        <div class="modal_form_input_group">
-                            <input placeholder="Full name" class="modal_input" type="text">
-                            <input placeholder="Email" class="modal_input" type="text">
-                        </div>
-                        <button class="modal_join_btn">
-                            Join
-                        </button>
-                    </form>
+            <div class="header_mobile_body">
+                <div id="header_menu" class="header_menu">
+                    <img src="../assest/icons/menu/menu.svg" alt="">
+                </div>
+                <div id="overlay" class="overlay">
+                    <img id="close_icon" class="close_icon" src="../assest/icons/menu/close.svg" alt="">
+
+                    <div class="menu_list">
+                        <ul class="menu_nav">
+                            <li class="menu_item">
+                                <a href="">
+                                    Акции
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="">
+                                    О магазине
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="">
+                                    Каталлог
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="">
+                                    Доставка
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="">
+                                    Блог
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
