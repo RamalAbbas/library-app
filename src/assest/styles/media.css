@@ -1,3 +1,16 @@
+@media screen and (max-width:1300px){
+    .about_top{
+       flex-direction: column-reverse;
+    }
+
+    .about_title{
+        text-align: center;
+    }
+    .about_description{
+        text-align: center;
+    }
+    
+}
 @media screen and (max-width:992px){
     .footer-top{
         flex-direction: column;
