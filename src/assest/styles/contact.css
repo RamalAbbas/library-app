@@ -32,6 +32,7 @@ textarea {
     /* padding-left: 38px; */
     padding-top: 13px;
     padding-left: 38px;
+    border: 1px solid #CECECE;
 }
 
 input {display: flex;
@@ -60,6 +61,7 @@ padding-left: 41px;
     margin-top: 85px;
     border: none;}
     .buttonDiv{
+        margin-top: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
