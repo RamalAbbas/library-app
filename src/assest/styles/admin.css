@@ -1,0 +1,26 @@
+/* admin sidebar start*/
+.admin_sidebar{
+    width: 22.19%;
+    height: 100%;
+    color: #ffffff;
+    background: #720418;;
+    padding: 93px 0px 0px 35px;
+}
+
+.sidebar_main{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar_item{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    
+}
+
+/* admin sidebar end*/
+
+/* admin main start */
+    
+/* admin main end */

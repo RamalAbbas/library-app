@@ -1,0 +1,189 @@
+.book_main {
+    display: flex;
+    flex-direction: column;
+    gap: 109px;
+    padding-left: 13.25%;
+    padding-right: 11.38%;
+    padding-top: 173px;
+    padding-bottom: 148px;
+    background-color: #FFFAF5;
+
+}
+
+
+.book_top {
+    display: flex;
+    gap: 141px;
+    /* align-items: center; */
+}
+
+.book_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.back_btn {
+    width: 100px;
+    height: 29px;
+    background-color: #E16A00;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 196.187%;
+    border: 0;
+    display: flex;
+    text-align: left;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 7px 10px 12px;
+    margin-bottom: 80px;
+
+}
+
+.back_navigation {
+    text-decoration: none;
+}
+
+
+
+.btn_primary {
+
+    background-color: #2F80ED;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 196.187%;
+    text-transform: uppercase;
+    max-height: 23px;
+    width: 69px;
+    margin-bottom: 5px;
+
+}
+
+
+.book_name {
+    color: #241400;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 196.187%;  */
+    margin-bottom: 5px;
+
+}
+
+.book_apperance {
+    color: #241400;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 196.187%; / */
+    margin-bottom: 5px;
+
+}
+
+.book_writer {
+    color: #241400;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: 196.187%;  */
+    margin-bottom: 5px;
+
+}
+
+
+.book_description {
+    color: #241400;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 5px;
+    max-width: 686px;
+    width: 100%
+}
+
+.comment_form {
+    margin-top: 122px;
+    width: 100%;
+    display: flex;
+
+    max-height: 60px;
+}
+
+.comment_input {
+    max-width: 634px;
+    width: 100%;
+    padding-left: 38px;
+    height: 60px;
+    border-radius: 0px 0px 5px 5px;
+    background: rgba(255, 255, 255, 0.80);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+    border: 0;
+    outline: none;
+}
+
+.send_button {
+    width: 60px;
+    height: 60px;
+    border-radius: 0px 5px 5px 0px;
+    background: #E16A00;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment_main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 53px;
+    gap: 43px;
+}
+
+.comment_box {
+    padding: 28px 17.5px 29px 18px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.comment_head {
+    display: flex;
+    align-items: center;
+}
+
+.comment_name {
+    color: #232323;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.comment_title {
+    color: #232323;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-left: 10px;
+}
+
+.comment_description {
+    color: #232323;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 14px;
+}
