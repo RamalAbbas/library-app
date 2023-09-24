@@ -2,6 +2,8 @@ header{
     width: 100%;
     background: #FFFAF5;
     padding-top: 31px;
+    padding-left: 13.44% !important;
+    padding-right: 5.31% !important;
 }
 
 .header_navbar{

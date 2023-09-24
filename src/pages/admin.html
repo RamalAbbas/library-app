@@ -9,20 +9,234 @@
 </head>
 <body>
     <main>
-        <div class="admin_sidebar">
-            <div class="sidebar_logo">
-                <img src="../assest/icons/admin/logo/sidebar_logo.svg" alt="sidebar_logo">
-            </div>
-            <div class="sidebar_main">
-                <div class="sidebar_item">
-                <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
-                <p>Home</p>
+        <div class="admin"> 
+            <div class="admin_sidebar">
+                <div class="sidebar_logo">
+                    <img src="../assest/icons/admin/logo/sidebar_logo.svg" alt="sidebar_logo">
+                </div>
+                <div class="sidebar_main">
+                    <div class="sidebar_item">
+                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <p class="sidebar_item_title">Home</p>
+                    </div>
+                    <div class="sidebar_item">
+                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <p class="sidebar_item_title">Home</p>
+                    </div>
+                    <div class="sidebar_item">
+                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <p class="sidebar_item_title">Home</p>
+                    </div>
                 </div>
             </div>
-        </div>
+    
+            <div class="admin_main">
+                <div class="admin_header">
+                    <img class="admin_user_icon" src="../assest/icons/admin/user/user.svg" alt="">
+                    <p class="admin_user_name">
+                        Admin
+                    </p>
+                </div>
 
-        <div class="admin_main">
+                <p class="admin_main_title">
+                    Add book
+                </p>
 
+                <div class="admin_search">
+                    <label class="admin_search_label" for="">
+                        Search Book
+                    </label>
+                    <form class="admin_search_form" action="">
+                        <input class="admin_search_input" placeholder="Dan Brown" type="text">
+                        <button class="admin_search_button">
+                            <img src="../assest/icons/admin/search/search.svg" alt="">
+                        </button>
+                    </form>
+                    <div class="admin_search_history">
+                        <div class="admin_history_item">
+                            <img src="../assest/icons/admin/search/history.svg" alt="">
+                            Dan Brown Davinc
+                        </div>
+                        <div class="admin_history_item">
+                            <img src="../assest/icons/admin/search/history.svg" alt="">
+                            Dan Brown Davinc
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin_add_book">
+                    <p class="admin_form_head_title">
+                        Book form
+                    </p>
+                    <form class="admin_add_form" action="">
+                        <div class="admin_form_item">
+                            <label class="admin_form_label" for="">
+                                Book Name
+                            </label>
+                            <input class="admin_form_input" placeholder="Angels" type="text">
+                        </div>
+                        <div class="admin_form_item">
+                            <label class="admin_form_label" for="">
+                                Author Name
+                            </label>
+                            <input class="admin_form_input" placeholder="Dan Brown" type="text">
+                        </div>
+                        <div class="admin_form_item">
+                            <label class="admin_form_label" for="">
+                                Book Image Url
+                            </label>
+                            <input class="admin_form_input" placeholder="Alex Smith" type="text">
+                        </div>
+                        <div class="admin_form_item">
+                            <label class="admin_form_label" for="">
+                                Description
+                            </label>
+                            <textarea class="admin_form_textarea" placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..." id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="admin_form_item">
+                            <label class="admin_form_label" for="">
+                                Book Type
+                            </label>
+                            <input class="admin_form_input" placeholder="Fantastic" type="text">
+                        </div>
+                        <button class="admin_add_button">    
+                            Add
+                        </button>
+                    </form>
+                </div>
+
+                <div class="admin_add_information">
+                    <p class="admin_form_bold_title">
+                        About Store
+                    </p>
+                    <form class="admin_add_form" action="">
+                        <div class="admin_form_item">
+                            <label class="admin_form_label" for="">
+                                Title
+                            </label>
+                            <input class="admin_form_input" placeholder="About Store" type="text">
+                        </div>
+                        <div class="admin_form_item">
+                            <label class="admin_form_label" for="">
+                                Book Image Url
+                            </label>
+                            <input class="admin_form_input" placeholder="https://image:url/" type="text">
+                        </div>
+                        <div class="admin_form_item">
+                            <label class="admin_form_label" for="">
+                                Description
+                            </label>
+                            <textarea class="admin_form_textarea" placeholder=" We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..." id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <button class="admin_add_button">    
+                            About info add
+                        </button>
+                    </form>
+                </div>
+
+                <div class="admin_add_information">
+                    <p class="admin_form_bold_title">
+                        Join  Us
+                    </p>
+                    <table class="join_table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Full Name</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Audrey Mckinney</td>
+                                <td>lisa.watson@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Savannah Howard</td>
+                                <td>jeff.brown@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="admin_add_information">
+                    <p class="admin_form_bold_title">
+                        Books
+                    </p>
+                    <table class="books_table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Author</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="custom_td">
+                                    <img src="../assest/icons/admin/table/card_img.svg" alt="">
+                                    Angels
+                                </td>
+                                <td>Lorem ipsum test...</td>
+                                <td>Dedectiv</td>
+                                <td>Dan Brown</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="admin_add_information">
+                    <p class="admin_form_bold_title">
+                        Contact Us
+                    </p>
+                    <table class="contact_table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Full Name</th>
+                                <th>Email Address</th>
+                                <th>Address</th>
+                                <th>Phone Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Audrey Mckinney</td>
+                                <td>lisa.watson@example.com</td>
+                                <td>8445 Railroad St undefined Tampa</td>
+                                <td>(209) 555-0104</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Savannah Howard</td>
+                                <td>jeff.brown@example.com</td>
+                                <td>8445 Railroad St undefined Tampa</td>
+                                <td>(209) 555-0104</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Savannah Howard</td>
+                                <td>jeff.brown@example.com</td>
+                                <td>8445 Railroad St undefined Tampa</td>
+                                <td>(209) 555-0104</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Savannah Howard</td>
+                                <td>jeff.brown@example.com</td>
+                                <td>8445 Railroad St undefined Tampa</td>
+                                <td>(209) 555-0104</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
 </body>

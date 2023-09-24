@@ -1,7 +1,11 @@
+.admin{
+    display: flex;
+}
+
 /* admin sidebar start*/
 .admin_sidebar{
     width: 22.19%;
-    height: 100%;
+    height: auto;
     color: #ffffff;
     background: #720418;;
     padding: 93px 0px 0px 35px;
@@ -9,18 +13,315 @@
 
 .sidebar_main{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
 }
 
 .sidebar_item{
     display: flex;
     align-items: center;
     gap: 11px;
-    
+}
+
+.sidebar_item_title{
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 196.187%;
 }
 
 /* admin sidebar end*/
 
 /* admin main start */
-    
+
+.admin_main{
+    width: 100%;
+    padding: 48px 58px 48px 33px;
+    background: #FFFAF5;
+}
+
+.admin_header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+}
+
+.admin_user_icon{
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.admin_user_name{
+    cursor: pointer;
+    color: #241400;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_main_title{
+    color:  #333;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 196.187%;
+    margin-bottom:  26px;
+}
+
+.admin_search_label{
+    color: #333;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 196.187%;
+    margin-bottom: 4px;
+}
+
+.admin_search_input{
+    max-width: 395px;
+    width: 100%;
+    height: 41px;
+    border-radius: 34px;
+    border: 2px solid rgba(57, 31, 0, 0.48);
+    background: #FFF;
+    color: #ADADAD;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 33px;
+}
+
+.admin_search_form{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.admin_search_input::placeholder{
+    color: #ADADAD;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_search_button{
+    width: 63px;
+    height: 40px;
+    border-radius: 34px;
+    background: #FF8B00;
+    border: 0;
+}
+
+.admin_search_history{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 36px;
+    max-width: 388px;
+    width: 100%;
+    height: 85px;
+    border-radius: 35px;
+    background: #F1F0F0;
+    gap: 13px;
+    margin-top: 6px;
+}
+
+.admin_history_item{
+    display: flex;
+    gap: 24px;
+    color: #BCBCBC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_add_book{
+    margin-top: 81px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.admin_add_information{
+    margin-top: 161px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.admin_form_head_title{
+    color: #333;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 196.187%; 
+}
+
+.admin_form_bold_title{
+    color: #333;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 196.187%; 
+}
+
+.admin_add_form{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 30px 30px 30px;
+    border-radius: 20px;
+    background: #FFF;
+    gap: 24px;
+}
+
+.admin_form_item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin_form_label{
+    color: #030102;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_form_input{
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #E2E6EE;
+    background: #FFF;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+
+    /* daxilindeki textin stayli */
+    color: #030102;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_form_input::placeholder{
+    color: #030102;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_form_textarea{
+    min-height: 73px;
+    height: 73px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #E2E6EE;
+    background: #FFF;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+
+    /* daxilindeki textin stayli */
+    color: #030102;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_form_textarea::placeholder{
+    color: #030102;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.admin_add_button{
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: #FF8B00;
+
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 0;
+}
+
+.join_table{
+    max-width: 512px;
+    width: 100%;
+}
+
+.books_table{
+    max-width: 100%;
+    width: 100%;
+}
+
+.contact_table{
+    max-width: 100%;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead{
+    background: #720418;
+    box-shadow: 0px -1px 0px 0px #E6E7E9 inset;
+}
+
+thead tr th{
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: 0.14px;
+}
+
+tbody tr td{
+    text-align: center;
+    color: #05111A;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: 0.14px;
+}
+  
+.custom_td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+  td, th {
+    text-align: left;
+    padding: 8px;
+    height: 48px;
+  }
+  tbody tr{
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E6E7E9 inset, 0px 1px 0px 0px #E6E7E9 inset;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #F9FAFC;
+    box-shadow: 0px -1px 0px 0px #E6E7E9 inset, 0px 1px 0px 0px #E6E7E9 inset;
+  }
+
+  
 /* admin main end */
