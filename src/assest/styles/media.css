@@ -131,4 +131,81 @@
     font-size: 16px;
     font-weight: 400;
   }
+    /*  ---Homepage--- */
+  main {
+    width:100%;
+    padding: 0 15px;
+  }
+  .header-buttom {
+    flex-direction: column;
+    margin: 70px 0 50px  !important;
+  }
+  .group-1 {
+    align-items: center;
+    margin-right: 0 !important;
+  }
+  h2 {
+    font-size: 28px !important;
+    margin: 0 0 25px 0 !important;
+  }
+  .group-1 p {
+    width: 100%;
+    margin-bottom: 40px !important;
+  }
+  .group-1 a {
+    width: 290px;
+    justify-content: center;
+    padding: 0;
+  }
+  .group-2 {
+    margin: 40px 0 !important;
+    text-align: center;
+  }
+  .group-2 img {
+    width: 100%;
+  }
+  .link-group {
+    display: flex !important; 
+    flex-direction: column;
+    gap: 15px !important;
+  }
+  .about-des {
+    flex-direction: column;
+  }
+  .link-group div {
+    width: 220px;
+  }
+  .astore-title {
+    margin-right: 0;
+  }
+  .link-group {
+    margin: 30px 0 !important;
+  }
+  .astore-title {
+    margin-right: 0 !important;
+  }
+  .astore-num {
+    margin: 0 20px 0 0 !important;
+  }
+  .delivery-sec {
+    margin: 64px 0 !important;
+    }
+  .delivery-sec p {
+    margin-top: 12px !important;
+  }
+  .media-section {
+    margin-top: 90px !important;
+  }
+  h6 {
+    font-size: 18px !important;
+  }
+  .media-logos a img {
+    width: 38px;
+  }
+  .media-logos {
+    margin-bottom: 54px !important;
+  }
+  .media-section {
+    padding-bottom: 0 !important;
+  }
 }
