@@ -54,6 +54,8 @@
     cursor: pointer;
   }
   .slider {
+    max-width: 800px;
+    width: 100%;
     margin-top: 293px;
     margin-right: 59px;
     display: flex;
@@ -89,10 +91,11 @@
     line-height: 196.187%;
   }
   .writing p {
+    color: #241400;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 196.187%;
+    line-height: 196.187%; /* 27.466px */
   }
   .social_medias {
     margin-top: 124px;
