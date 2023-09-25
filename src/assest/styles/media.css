@@ -138,19 +138,19 @@
   }
   .header-buttom {
     flex-direction: column;
-    margin: 70px 0 50px  !important;
+    margin: 70px 0 50px ;
   }
   .group-1 {
     align-items: center;
-    margin-right: 0 !important;
+    margin-right: 0;
   }
   h2 {
-    font-size: 28px !important;
-    margin: 0 0 25px 0 !important;
+    font-size: 28px ;
+    margin: 0 0 25px 0;
   }
   .group-1 p {
     width: 100%;
-    margin-bottom: 40px !important;
+    margin-bottom: 40px;
   }
   .group-1 a {
     width: 290px;
@@ -158,16 +158,16 @@
     padding: 0;
   }
   .group-2 {
-    margin: 40px 0 !important;
+    margin: 40px 0;
     text-align: center;
   }
   .group-2 img {
     width: 100%;
   }
   .link-group {
-    display: flex !important; 
+    display: flex; 
     flex-direction: column;
-    gap: 15px !important;
+    gap: 15px;
   }
   .about-des {
     flex-direction: column;
@@ -179,33 +179,33 @@
     margin-right: 0;
   }
   .link-group {
-    margin: 30px 0 !important;
+    margin: 30px 0;
   }
   .astore-title {
-    margin-right: 0 !important;
+    margin-right: 0;
   }
   .astore-num {
-    margin: 0 20px 0 0 !important;
+    margin: 0 20px 0 0;
   }
   .delivery-sec {
-    margin: 64px 0 !important;
+    margin: 64px 0;
     }
   .delivery-sec p {
-    margin-top: 12px !important;
+    margin-top: 12px;
   }
   .media-section {
-    margin-top: 90px !important;
+    margin-top: 90px;
   }
   h6 {
-    font-size: 18px !important;
+    font-size: 18px;
   }
   .media-logos a img {
     width: 38px;
   }
   .media-logos {
-    margin-bottom: 54px !important;
+    margin-bottom: 54px;
   }
   .media-section {
-    padding-bottom: 0 !important;
+    padding-bottom: 0;
   }
 }
