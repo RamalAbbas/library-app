@@ -13,6 +13,7 @@ main, .about-str-sec, .delivery-sec, .media-section {
     align-items: center;
 }
 .header-buttom {
+    width: 100%;
     margin: 100px 0 66px ;
     display: flex;
 }

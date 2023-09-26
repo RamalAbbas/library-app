@@ -1,0 +1,24 @@
+/* utilities */
+@import './utilities/global.css';
+@import './utilities/reset.css';
+@import './utilities/roots.css';
+@import './utilities/font.css';
+
+/* component */
+@import './components/header.css';
+@import './components/social-media.css';
+
+/* pages */
+@import './pages/homepage.css';
+@import './pages/about.css';
+@import './pages/contact.css';
+@import './pages/catalog-page.css';
+@import './pages/search.css';
+@import './pages/book.css';
+@import './pages/admin.css';
+
+/* component */
+@import './components/footer.css';
+
+/* media */
+@import './media.css'

@@ -1,0 +1,22 @@
+.social_media_component{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 133px;
+    margin-top: 140px;
+}
+
+.social_media_title{
+    color: #241400;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 196.187%; 
+}
+
+.social_media_icon_body{
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+}

@@ -208,4 +208,22 @@
   .media-section {
     padding-bottom: 0;
   }
+
+  /* social media component media styles start */
+    .social_media_component{
+      gap: 17px;
+    }
+    .social_media_title{
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .social_media_icon_body{
+      justify-content: center;
+      gap: 24.47px;
+    }
+    .social_media_icon_body a img{
+        width: 36px;
+        height: 36px;
+    }
+  /* social media component media styles end */
 }

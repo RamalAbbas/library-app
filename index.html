@@ -4,15 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="./src/assest/styles/reset.css" />
-    <link rel="stylesheet" href="./src/assest/styles/global.css" />
-    <link rel="stylesheet" href="./src/assest/styles/header.css" />
-    <link rel="stylesheet" href="./src/assest/styles/footer.css" />
-    <link rel="stylesheet" href="./src/assest/styles/homepage.css" />
-    <link rel="stylesheet" href="./src/assest/styles/media.css" />
-    <link rel="stylesheet" href="./src/assest/styles/roots.css" />
-    <script defer src="./src/assest/js/modal.js"></script>
-    <script defer src="./src/assest/js/hamburger-menu.js"></script>
+    <link rel="stylesheet" href="./src/assest/styles/main.css" />
   </head>
   <body>
     <header id="header">
@@ -104,7 +96,7 @@
     </header>
 
     <main>
-      <div class="header-buttom">
+      <div class="header-buttom container">
         <div class="group-1">
           <h2>Books from A to Z</h2>
           <p>
@@ -164,21 +156,21 @@
           the order basket, aafter selecting the delivery city. More details
         </p>
       </div>
-      <div class="media-section">
-        <h6>Follow us on social media</h6>
-        <div class="media-logos">
-          <a href="#"
-            ><img src="./src/assest/images/Homepage/fblogo.svg" alt="Facebook"
-          /></a>
-          <a href="#"
-            ><img src="./src/assest/images/Homepage/twlogo.svg" alt="Twitter"
-          /></a>
-          <a href="#"
-            ><img
-              src="./src/assest/images/Homepage/instlogo.svg"
-              alt="Instagram"
-          /></a>
-        </div>
+      <div class="social_media_component">
+          <p class="social_media_title">
+            Follow us on social media
+          </p>
+          <div class="social_media_icon_body">
+              <a href="https://www.facebook.com/">
+                <img src="./src/assest/icons/social-media/facebook.svg" alt="">
+              </a>
+              <a href="https://twitter.com/">
+                <img src="./src/assest/icons/social-media/twitter.svg" alt="">
+              </a>
+              <a href="https://www.instagram.com/">
+                <img src="./src/assest/icons/social-media/instagram.svg" alt="">
+              </a>
+          </div>
       </div>
     </main>
 
@@ -224,5 +216,7 @@
         All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
       </p>
     </footer>
+
+    <script type="module" src="./src/assest/js/app.js"></script>
   </body>
 </html>
