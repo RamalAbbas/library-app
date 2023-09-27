@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="../assest/styles/global.css">
-    <link rel="stylesheet" href="../assest/styles/admin.css">
+    <link rel="stylesheet" href="../assest/styles/main.css">
+    <script defer src="../assest/js/admin.js"></script>
 </head>
 <body>
     <main>
@@ -16,27 +16,27 @@
                 </div>
                 <div class="sidebar_main">
                     <div class="sidebar_item">
-                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
                         <p class="sidebar_item_title">Home</p>
                     </div>
                     <div class="sidebar_item">
-                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
                         <p class="sidebar_item_title">Books</p>
                     </div>
                     <div class="sidebar_item">
-                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
                         <p class="sidebar_item_title">About</p>
                     </div>
                     <div class="sidebar_item">
-                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
                         <p class="sidebar_item_title">Join us</p>
                     </div>
                     <div class="sidebar_item">
-                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
                         <p class="sidebar_item_title">Contact</p>
                     </div>
                     <div class="sidebar_item">
-                        <img src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
+                        <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
                         <p class="sidebar_item_title">Logout</p>
                     </div>
                     
@@ -60,20 +60,13 @@
                         Search Book
                     </label>
                     <form class="admin_search_form" action="">
-                        <input class="admin_search_input" placeholder="Dan Brown" type="text">
-                        <button class="admin_search_button">
+                        <input id="admin_search_input" class="admin_search_input" placeholder="Dan Brown" type="text">
+                        <button id="admin_search_button" class="admin_search_button">
                             <img src="../assest/icons/admin/search/search.svg" alt="">
                         </button>
                     </form>
-                    <div class="admin_search_history">
-                        <div class="admin_history_item">
-                            <img src="../assest/icons/admin/search/history.svg" alt="">
-                            Dan Brown Davinc
-                        </div>
-                        <div class="admin_history_item">
-                            <img src="../assest/icons/admin/search/history.svg" alt="">
-                            Dan Brown Davinc
-                        </div>
+                    <div id="admin_result" class="admin_result">
+                        
                     </div>
                 </div>
 
@@ -86,31 +79,31 @@
                             <label class="admin_form_label" for="">
                                 Book Name
                             </label>
-                            <input class="admin_form_input" placeholder="Angels" type="text">
+                            <input id="book_name_input" class="admin_form_input" placeholder="Angels" type="text">
                         </div>
                         <div class="admin_form_item">
                             <label class="admin_form_label" for="">
                                 Author Name
                             </label>
-                            <input class="admin_form_input" placeholder="Dan Brown" type="text">
+                            <input id="book_author_input" class="admin_form_input" placeholder="Dan Brown" type="text">
                         </div>
                         <div class="admin_form_item">
                             <label class="admin_form_label" for="">
                                 Book Image Url
                             </label>
-                            <input class="admin_form_input" placeholder="Alex Smith" type="text">
+                            <input id="book_img_input"  class="admin_form_input" placeholder="Alex Smith" type="text">
                         </div>
                         <div class="admin_form_item">
                             <label class="admin_form_label" for="">
                                 Description
                             </label>
-                            <textarea class="admin_form_textarea" placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..." id="" cols="30" rows="10"></textarea>
+                            <textarea id="book_description_textarea"  class="admin_form_textarea" placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..." id="" cols="30" rows="10"></textarea>
                         </div>
                         <div class="admin_form_item">
                             <label class="admin_form_label" for="">
                                 Book Type
                             </label>
-                            <input class="admin_form_input" placeholder="Fantastic" type="text">
+                            <input id="book_type_input" class="admin_form_input" placeholder="Fantastic" type="text">
                         </div>
                         <button class="admin_add_button">    
                             Add

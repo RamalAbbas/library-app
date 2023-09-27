@@ -1,4 +1,5 @@
 .admin{
+    width: 100%;
     display: flex;
 }
 
@@ -15,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 24px;
 }
 
 .sidebar_item{
@@ -118,8 +120,9 @@
     border: 0;
 }
 
-.admin_search_history{
-    display: flex;
+.admin_result{
+    overflow-y: scroll;
+    display: none;
     flex-direction: column;
     padding: 20px 36px;
     max-width: 388px;
@@ -131,7 +134,12 @@
     margin-top: 6px;
 }
 
-.admin_history_item{
+.admin_result.active{
+    display: flex !important;
+}
+
+.admin_result_item{
+    cursor: pointer;
     display: flex;
     gap: 24px;
     color: #BCBCBC;
@@ -309,19 +317,20 @@ tbody tr td{
 }
 
 td, th {
-text-align: left;
-padding: 8px;
-height: 48px;
+    text-align: left;
+    padding: 8px;
+    height: 48px;
+    vertical-align: middle;
 }
 
 tbody tr{
-background: #FFF;
-box-shadow: 0px -1px 0px 0px #E6E7E9 inset, 0px 1px 0px 0px #E6E7E9 inset;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E6E7E9 inset, 0px 1px 0px 0px #E6E7E9 inset;
 }
 
 tr:nth-child(even) {
-background-color: #F9FAFC;
-box-shadow: 0px -1px 0px 0px #E6E7E9 inset, 0px 1px 0px 0px #E6E7E9 inset;
+    background-color: #F9FAFC;
+    box-shadow: 0px -1px 0px 0px #E6E7E9 inset, 0px 1px 0px 0px #E6E7E9 inset;
 }
 
   
