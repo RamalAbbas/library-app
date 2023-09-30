@@ -18,13 +18,14 @@
     align-items: center;
     margin-right: 0;
   }
-  h2 {
+  .group1-title {
     font-size: 28px ;
     margin: 0 0 25px 0;
   }
   .group-1 p {
     width: 100%;
     margin-bottom: 40px;
+    text-align: center;
   }
   .group-1 a {
     width: 290px;
@@ -74,7 +75,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* grid-template-columns: auto auto; */
   }
 }
 @media screen and (max-width: 675px) {
@@ -167,7 +167,7 @@
     font-weight: 400;
   }
     /*  ---Homepage--- */
-  main {
+  .homepage-container {
     width:100%;
     padding: 0 15px;
   }
@@ -201,9 +201,6 @@
   }
   .media-section {
     margin-top: 90px;
-  }
-  h6 {
-    font-size: 18px;
   }
   .media-logos a img {
     width: 38px;
