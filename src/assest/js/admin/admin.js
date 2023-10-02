@@ -34,4 +34,5 @@ let getData = (bookId) => {
 
 let sendData = (book_data) => {
     console.log(book_data);
+    this
 }

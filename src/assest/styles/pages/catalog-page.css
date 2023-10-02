@@ -1,4 +1,9 @@
 /** main-head */
+.catalog_container{
+  padding-left: 13.44%;
+  padding-right: 13.44%;
+}
+
 main {
   background-color: #fffaf5;
 }
@@ -7,9 +12,9 @@ main {
   margin-bottom: 50px;
   display: flex;
   list-style: none;
-  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 271px;
 }
 .allBooksWord {
   color: var(--, #241400);
@@ -37,10 +42,21 @@ main {
 
 .BooksSlider {
   display: flex;
-  gap: 60px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  position: relative;
 }
+
+.slider_left_arrow{
+  position: absolute;
+  left: -53px;
+}
+
+.slider_right_arrow{
+  position: absolute;
+  right: -53px;
+}
+
 .book-box {
   width: 184px;
   height: 332px;
