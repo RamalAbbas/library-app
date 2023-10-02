@@ -84,3 +84,17 @@ padding-left: 41px;
         align-items: center;
      
     }
+
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+    .message {
+       position: fixed;
+        margin-right: 40px;
+        margin-top: 50px;
+        border-radius: 10px;
+        opacity: 0.8;
+      }
