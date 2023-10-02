@@ -1,5 +1,7 @@
 /** main-head */
 main {
+  display: flex;
+  flex-direction: column;
   background-color: #fffaf5;
 }
 .main-head {
