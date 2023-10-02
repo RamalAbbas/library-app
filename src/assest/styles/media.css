@@ -36,6 +36,9 @@
     margin: 40px 0;
     text-align: center;
   }
+  .delivery-text {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 992px) {
   .footer-top {
@@ -75,6 +78,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .homepage-container {
+    width:100%;
+    padding: 0 15px;
   }
 }
 @media screen and (max-width: 675px) {
@@ -167,10 +174,6 @@
     font-weight: 400;
   }
     /*  ---Homepage--- */
-  .homepage-container {
-    width:100%;
-    padding: 0 15px;
-  }
   .group-2 img {
     width: 100%;
   }
@@ -197,7 +200,8 @@
     margin: 64px 0;
     }
   .delivery-sec p {
-    margin-top: 12px;
+    margin:12px 0 0 0;
+
   }
   .media-section {
     margin-top: 90px;
