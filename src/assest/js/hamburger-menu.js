@@ -8,3 +8,4 @@ header_menu.addEventListener('click',function(){
 close_icon.addEventListener('click',function(){
     overlay.classList.remove("show")
 })
+
