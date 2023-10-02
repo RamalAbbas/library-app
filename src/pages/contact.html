@@ -4,19 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Us</title>
-    <link rel="stylesheet" href="../assest/styles/global.css" />
-    <link rel="stylesheet" href="../assest/styles/header.css" />
-    <link rel="stylesheet" href="../assest/styles/footer.css" />
-    <link rel="stylesheet" href="../assest/styles/roots.css" />
-    <link rel="stylesheet" href="../assest/styles/font.css" />
-
-    <link rel="stylesheet" href="../assest/styles/contact.css" />
-    <link rel="stylesheet" href="../assest/styles/media.css" />
-
-    <script defer src="../assest/js/modal.js"></script>
-    <script defer src="../assest/js/hamburger-menu.js"></script>
   </head>
   <body>
+</head>
+<body>
     <header class="container" id="header">
       <nav class="header_navbar">
         <div class="header_navbar_brand">
@@ -26,7 +17,6 @@
             alt=""
           />
         </div>
-
         <ul class="header_nav">
           <li class="header_nav_item">
             <a href="../../index.html"> Home </a>
@@ -44,7 +34,6 @@
             <a href="./search-page.html"> Search </a>
           </li>
         </ul>
-
         <div class="header_authentication">
           <button id="join-btn" class="header_join-btn">
             <img src="../assest/icons/authentication/user.svg" alt="" />
@@ -62,7 +51,6 @@
               src="../assest/icons/menu/close.svg"
               alt=""
             />
-
             <div class="menu_list">
               <ul class="menu_nav">
                 <li class="menu_item">
@@ -86,12 +74,8 @@
         </div>
       </nav>
     </header>
-
     <main class="container">
       <h1 class="contact_h1">Contact us</h1>
-
-      
-
       <div class="contactUs">
         <div class="formDiv">
           <div class="firstFormDiv">
@@ -102,29 +86,29 @@
             <div class="rightFormDiv">
               <input class="email_Input" type="text" placeholder="Email" />
               <input class="phone_Input" type="number" placeholder="Phone" />
+            <div class="social_media_component">
+                <p class="social_media_title">
+                  Follow us on social media
+                </p>
+                <div class="social_media_icon_body">
+                    <a href="https://www.facebook.com/">
+                      <img src="../assest/icons/social-media/facebook.svg" alt="">
+                    </a>
+                    <a href="https://twitter.com/">
+                      <img src="../assest/icons/social-media/twitter.svg" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                      <img src="../assest/icons/social-media/instagram.svg" alt="">
+                    </a>
+                </div>
             </div>
-          </div>
-          <textarea class=""
-            name=""
-            id="contactTextarea"
-            cols="30"
-            rows="10"
-            placeholder="Note"  oninput="letterCounter()"
-          ></textarea>
-          <p><span id="textLength">0</span>/100</p>
-        </div>
-        <div class="buttonDiv">
-          <button type="button" class="btn sendButton btn-primary">Send</button>
-        </div>
-      </div>
-    </main>
-
+        </main>
+    
     <footer id="footer">
       <div class="footer-top">
         <div class="footer-logo">
           <img src="../assest/icons/footer/logo/logo.svg" alt="" />
         </div>
-
         <div class="footer_nav">
           <ul class="footer_list">
             <p class="footer_list_head_item">Popular</p>
@@ -135,7 +119,6 @@
               <a href=""> Business </a>
             </li>
           </ul>
-
           <ul class="footer_list">
             <p class="footer_list_head_item">Popular</p>
             <li class="footer_nav_item">
@@ -145,7 +128,6 @@
               <a href=""> Business </a>
             </li>
           </ul>
-
           <ul class="footer_list">
             <p class="footer_list_head_item">Popular</p>
             <li class="footer_nav_item">
@@ -161,27 +143,19 @@
         All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
       </p>
     </footer>
-  
-
     <script>
-
 const sendButton = document.querySelector(".sendButton");
-
   sendButton.addEventListener("click", function () {
     const nameInput = document.querySelector(".name_Input").value.trim();
     const addressInput = document.querySelector(".address_Input").value.trim();
     const emailInput = document.querySelector(".email_Input").value.trim();
     const phoneInput = document.querySelector(".phone_Input").value.trim();
     const contactTextarea = document.querySelector("#contactTextarea").value.trim();
-
     if (!nameInput || !addressInput || !emailInput || !phoneInput) {
       showMessage("Please fill in all fields.", true)
-
     } else if (emailInput.indexOf("@") === -1) {
-     
-      showMessage("Enter a valid email address.", true); 
-
-    } 
+      showMessage("Enter a valid email address.", true);
+    }
     else {
       const contactObj = {
         name: nameInput,
@@ -190,60 +164,47 @@ const sendButton = document.querySelector(".sendButton");
         phone: phoneInput,
         message: contactTextarea
       };
-
       document.querySelector(".name_Input").value = "";
       document.querySelector(".address_Input").value = "";
       document.querySelector(".email_Input").value = "";
       document.querySelector(".phone_Input").value = "";
       document.querySelector("#contactTextarea").value = "";
-
-         showMessage("Successful process", false); 
-
-
+         showMessage("Successful process", false);
       console.log(contactObj);
     }
   });
-
-
 function showMessage(message, isError) {
   const messageDiv = document.createElement("div");
-
   if (isError) {
-    messageDiv.textContent = "Error: " + message; 
+    messageDiv.textContent = "Error: " + message;
     messageDiv.classList.add("message", "error");
     messageDiv.style.backgroundColor = "red";
   } else {
-    messageDiv.textContent = message; 
+    messageDiv.textContent = message;
     messageDiv.classList.add("message", "success");
     messageDiv.style.backgroundColor = "green";
   }
-
   messageDiv.style.position = "fixed";
   messageDiv.style.top = "0";
   messageDiv.style.right = "0";
   messageDiv.style.padding = "10px";
   messageDiv.style.zIndex = "9999";
-
   document.body.appendChild(messageDiv);
-
   setTimeout(function () {
     messageDiv.remove();
   }, 3000);
 }
-
   function letterCounter() {
             var contactTextarea = document.querySelector("#contactTextarea");
             var textLength = document.querySelector("#textLength");
             var enteredText = contactTextarea.value;
             var letterCount =enteredText.length;
-        
             if (letterCount > 100) {
                 contactTextarea.value = enteredText.substring(0, 100);
                 letterCount = 100;
             }
             textLength.textContent = letterCount;
         }
-
       </script>
   </body>
 </html>
