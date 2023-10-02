@@ -85,21 +85,42 @@
                 </div>
                 <div class="rightFormDiv">
                 <input class="email_Input" type="text" placeholder="Email" />
-                <input class="phone_Input" type="text" placeholder="Phone" />
+                <input class="phone_Input" type="number" placeholder="Phone" />
                 </div>
             </div>
             <textarea
                 name=""
-                id=""
+                id="contactTextarea"
                 cols="30"
                 rows="10"
-                placeholder="Note"
+                placeholder="Note"  oninput="letterCounter()"
             ></textarea>
+            <p><span id="textLength">0</span>/100</p>
+
             </div>
             <div class="buttonDiv">
             <button type="button" class="btn sendButton btn-primary">Send</button>
             </div>
         </div>
+        <div class="social_media_component">
+          <p class="social_media_title">
+            Follow us on social media
+          </p>
+          <div class="social_media_icon_body">
+              <a href="https://www.facebook.com/">
+                <img src="../assest/icons/social-media/facebook.svg" alt="">
+              </a>
+              <a href="https://twitter.com/">
+                <img src="../assest/icons/social-media/twitter.svg" alt="">
+              </a>
+              <a href="https://www.instagram.com/">
+                <img src="../assest/icons/social-media/instagram.svg" alt="">
+              </a>
+          </div>
+      </div>
+  X (formerly Twitter)X (formerly Twitter)
+  X. It’s what’s happening
+  From breaking news and entertainment to sports and politics, get the full story with all the live commentary.
         </main>
     
     <footer id="footer">
@@ -141,5 +162,6 @@
         All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
       </p>
     </footer>
+    <script src="../assest/js/contact.js"></script>
   </body>
 </html>
