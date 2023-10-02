@@ -134,11 +134,14 @@
     font-size: 12px;
   }
   /* contactpage  */ 
-  .container {
+  .contactMain{
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
-
+  .contactUs{
+    width: 243px;
+  }
   .contact_h1 {
     font-size: 25px;
     text-align: center;
@@ -152,6 +155,7 @@
     flex-direction: column;
     gap: 33px;
   }
+  
 
   .contactUs input {
     width: 243px;
@@ -161,10 +165,15 @@
     font-size: 16px;
     font-weight: 400;
     color: #241400;
+    padding: 15px;
+
   }
-  textarea {
-    display: none;
-  }
+ #contactTextarea{padding: 15px;
+font-size: 16px;
+color: #241400;
+height: 120px;
+}
+
   .sendButton {
     width: 243px;
     margin-bottom: 69px;
@@ -173,6 +182,10 @@
     font-size: 16px;
     font-weight: 400;
   }
+
+  .message{
+  font-size: 12px;}
+  
     /*  ---Homepage--- */
   .group-2 img {
     width: 100%;
