@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
     <link rel="stylesheet" href="../assest/styles/main.css">
 </head>
+
 <body>
     <main>
-        <div class="admin"> 
+        <div class="admin">
             <div class="admin_sidebar">
                 <div class="sidebar_logo">
                     <img src="../assest/icons/admin/logo/sidebar_logo.svg" alt="sidebar_logo">
@@ -38,10 +40,10 @@
                         <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
                         <p class="sidebar_item_title">Logout</p>
                     </div>
-                    
+
                 </div>
             </div>
-    
+
             <div class="admin_main">
                 <div class="admin_header">
                     <img class="admin_user_icon" src="../assest/icons/admin/user/user.svg" alt="">
@@ -65,7 +67,7 @@
                         </button>
                     </form>
                     <div id="admin_result" class="admin_result">
-                        
+
                     </div>
                 </div>
 
@@ -90,13 +92,15 @@
                             <label class="admin_form_label" for="">
                                 Book Image Url
                             </label>
-                            <input id="book_img_input"  class="admin_form_input" placeholder="Alex Smith" type="text">
+                            <input id="book_img_input" class="admin_form_input" placeholder="Alex Smith" type="text">
                         </div>
                         <div class="admin_form_item">
                             <label class="admin_form_label" for="">
                                 Description
                             </label>
-                            <textarea id="book_description_textarea"  class="admin_form_textarea" placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..." id="" cols="30" rows="10"></textarea>
+                            <textarea id="book_description_textarea" class="admin_form_textarea"
+                                placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
+                                id="" cols="30" rows="10"></textarea>
                         </div>
                         <div class="admin_form_item">
                             <label class="admin_form_label" for="">
@@ -104,7 +108,7 @@
                             </label>
                             <input id="book_type_input" class="admin_form_input" placeholder="Fantastic" type="text">
                         </div>
-                        <button id="add_book_btn" class="admin_add_button">    
+                        <button id="add_book_btn" class="admin_add_button">
                             Add
                         </button>
                     </form>
@@ -131,9 +135,11 @@
                             <label class="admin_form_label" for="">
                                 Description
                             </label>
-                            <textarea class="admin_form_textarea" placeholder=" We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..." id="" cols="30" rows="10"></textarea>
+                            <textarea class="admin_form_textarea"
+                                placeholder=" We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
+                                id="" cols="30" rows="10"></textarea>
                         </div>
-                        <button class="admin_add_button">    
+                        <button class="admin_add_button">
                             About info add
                         </button>
                     </form>
@@ -141,7 +147,7 @@
 
                 <div class="admin_add_information">
                     <p class="admin_form_bold_title">
-                        Join  Us
+                        Join Us
                     </p>
                     <table class="join_table">
                         <thead>
@@ -245,9 +251,10 @@
         </div>
     </main>
 
-    <script src="../assest/js/helper/firebase-helper.js"></script>
+    <script type="module" src="../assest/js/helper/firebase-helper.js"></script>
     <script src="../assest/js/dom/selector.js"></script>
     <script src="../assest/js/dom/event.js"></script>
     <script src="../assest/js/admin/admin.js"></script>
 </body>
+
 </html>

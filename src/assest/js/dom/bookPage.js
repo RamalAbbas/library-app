@@ -5,7 +5,9 @@ let comment_description = document.querySelector(".comment_description");
 send_button.addEventListener("click", function (e) {
   e.preventDefault();
   let inputValue = comment_input.value;
-
-  comment_description.innerHTML = inputValue;
   comment_input.value = "";
+
+     
+    
+  comment_description.innerHTML = inputValue;
 });

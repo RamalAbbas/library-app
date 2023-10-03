@@ -5,30 +5,38 @@ body {
 }
 
 .homepage-container {
-    color: var( --fontColor);
+    color: var(--fontColor);
 }
-.homepage-container, .about-str-sec, .delivery-sec, .media-section {
+
+.homepage-container,
+.about-str-sec,
+.delivery-sec,
+.media-section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .header-buttom {
     width: 100%;
     margin: 100px 0 66px 100px;
     display: flex;
     justify-content: center;
 }
+
 .group1-title {
     font-size: 36px;
     font-weight: 900;
     margin: 0 0 16px 0;
 }
+
 .group-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right:110px;
+    margin-right: 110px;
 }
+
 .group-1 p {
     width: 370px;
     font-size: 13px;
@@ -36,9 +44,11 @@ body {
     line-height: 196.187%;
     margin-bottom: 16px;
 }
+
 .group-2 {
-    margin:46px 0 70px 100px;
+    margin: 46px 0 70px 100px;
 }
+
 .group-1 a {
     width: 212px;
     height: 50px;
@@ -56,21 +66,28 @@ body {
     font-size: 25px;
     font-weight: 900;
 }
+
 h3 {
     color: black;
 }
+
 .about-title {
     margin-bottom: 32px;
 }
-.about-des,.about-des div {
+
+.about-des,
+.about-des div {
     display: flex;
 }
+
 .catalog-link-group {
     text-align: center;
 }
+
 .delivery-sec {
-margin: 64px;
+    margin: 64px;
 }
+
 .delivery-text {
     margin: 42px 86px 0;
     font-size: 12px;
@@ -79,37 +96,44 @@ margin: 64px;
     text-align: center;
     padding: 0 60px;
 }
+
 .media-section {
     margin-top: 70px;
     padding-bottom: 70px;
 }
+
 .media-logos {
     margin-top: 22px;
     margin-bottom: 63px;
 }
+
 .media-logos a {
     width: auto;
     margin: 27px;
 }
+
 .astore-num {
     font-size: 50px;
     font-weight: 900;
     line-height: 196.187%;
     margin: 0 20px 0 30px;
-    }
+}
+
 .astore-title {
     font-size: 13px;
     font-weight: 400;
     display: flex;
-    align-items:center;
+    align-items: center;
     margin-right: 30px;
 }
+
 .link-group {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 36px;
     margin: 50px 0;
 }
+
 .link-group div {
     width: 240px;
     height: 76px;
@@ -120,12 +144,14 @@ margin: 64px;
     align-items: center;
     justify-content: center;
 }
+
 .catalog-link a {
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
     color: var(--fontColor);
 }
+
 .about-str-sec {
     margin-top: 86px;
 }
