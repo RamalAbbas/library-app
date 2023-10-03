@@ -92,9 +92,40 @@
     width:100%;
     padding: 0 15px;
   }
+
+  /* admin start */
+    .admin_header{
+      display: none ;
+    }
+    .admin_sidebar{
+      display: none;
+    }
+    .admin_mobil_header{
+      display: flex;
+    }
+  /* admin end */
+}
+
+@media screen and (max-width: 769px){
+    .admin_main{
+      padding-left: 13px;
+      padding-right: 7px;
+    }
+    .table_scroll{
+        overflow-x: scroll;
+        &&::-webkit-scrollbar{
+          background: transparent;
+        }
+    }
+    .admin_mobil_header{
+      padding-right: 22px;
+    }
 }
 
 @media screen and (max-width: 675px) {
+  .admin_search_input{
+    max-width: 83%;
+  }
   footer {
     display: flex;
     align-items: center;
