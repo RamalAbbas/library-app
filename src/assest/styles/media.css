@@ -123,6 +123,15 @@
 }
 
 @media screen and (max-width: 675px) {
+  .mobil-id{
+    min-width: 54px !important;
+  }
+  td{
+    min-width: 199px;
+  }
+  .admin_add_form{
+    padding: 16px 15px 15px 15px;
+  }
   .admin_search_input{
     max-width: 83%;
   }
