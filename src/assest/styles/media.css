@@ -6,6 +6,7 @@
   .about_title {
     text-align: center;
   }
+
   .about_description {
     text-align: center;
   }
@@ -40,6 +41,7 @@
     padding: 0;
   }
 }
+
 @media screen and (max-width: 992px) {
   .footer-top {
     flex-direction: column;
@@ -47,26 +49,33 @@
     align-items: center;
     gap: 20px;
   }
+
   .footer_nav {
     justify-content: center;
   }
+
   .header_mobile_body {
     display: flex;
   }
+
   .header_nav {
     display: none;
   }
+
   .header_authentication {
     display: none;
   }
+
   .about_container {
     padding-left: 5%;
     padding-right: 5%;
   }
+
   .container {
     padding-left: 5%;
     padding-right: 5%;
   }
+
   footer {
     padding-left: 5%;
     padding-right: 5%;
@@ -84,6 +93,7 @@
     padding: 0 15px;
   }
 }
+
 @media screen and (max-width: 675px) {
   footer {
     display: flex;
@@ -92,26 +102,33 @@
     padding-top: 13px;
     gap: 26px;
   }
+
   .footer-top {
     gap: 11px;
   }
+
   .footer_nav_item {
     display: none;
   }
+
   .footer_nav {
     gap: 8px;
   }
+
   .footer_list_head_item {
     color: #f2f2f2;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 196.187%; /* 23.542px */
+    line-height: 196.187%;
+    /* 23.542px */
   }
+
   .footer-logo img {
     width: 175px;
     height: 42px;
   }
+
   .footer-title {
     max-width: 290px;
     color: #fff;
@@ -122,17 +139,21 @@
     line-height: 196.187%;
     border-top: 1px solid rgba(255, 255, 255, 0.59);
   }
+
   .about_book_img_body img {
     width: 296px;
     height: 161px;
     object-fit: cover;
   }
+
   .about_title {
     font-size: 25px;
   }
+
   .about_description {
     font-size: 12px;
   }
+  .container {
   /* contactpage  */ 
   .contactMain{
     display: flex;
@@ -150,6 +171,7 @@
   .formDiv {
     flex-direction: column;
   }
+
   .firstFormDiv {
     display: flex;
     flex-direction: column;
@@ -167,6 +189,10 @@
     color: #241400;
     padding: 15px;
 
+  }
+
+  textarea {
+    display: none;
   }
  #contactTextarea{padding: 15px;
 font-size: 16px;
@@ -187,63 +213,113 @@ height: 120px;
   font-size: 12px;}
   
     /*  ---Homepage--- */
+  main {
+    width:100%;
+    padding: 0 15px;
+  }
+  .header-buttom {
+    flex-direction: column;
+    margin: 70px 0 50px ;
+  }
+  .group-1 {
+    align-items: center;
+    margin-right: 0;
+  }
+  h2 {
+    font-size: 28px ;
+    margin: 0 0 25px 0;
+  }
+  .group-1 p {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .group-1 a {
+    width: 290px;
+    justify-content: center;
+    padding: 0;
+  }
+  .group-2 {
+    margin: 40px 0;
+    text-align: center;
+  }
   .group-2 img {
     width: 100%;
   }
+
   .link-group {
-    flex-direction: column; 
+    display: flex; 
+    flex-direction: column;
     gap: 15px;
+  }
+  .about-des {
+    flex-direction: column;
   }
   .link-group div {
     width: 220px;
   }
+
   .astore-title {
     margin-right: 0;
   }
+
   .link-group {
     margin: 30px 0;
   }
+
   .astore-title {
     margin-right: 0;
   }
+
   .astore-num {
     margin: 0 20px 0 0;
   }
+
   .delivery-sec {
     margin: 64px 0;
-    }
+  }
+
   .delivery-sec p {
     margin:12px 0 0 0;
 
   }
+
   .media-section {
     margin-top: 90px;
+  }
+  h6 {
+    font-size: 18px;
   }
   .media-logos a img {
     width: 38px;
   }
+
   .media-logos {
     margin-bottom: 54px;
   }
+
   .media-section {
     padding-bottom: 0;
   }
 
   /* social media component media styles start */
-    .social_media_component{
-      gap: 17px;
-    }
-    .social_media_title{
-      font-size: 18px;
-      font-weight: 900;
-    }
-    .social_media_icon_body{
-      justify-content: center;
-      gap: 24.47px;
-    }
-    .social_media_icon_body a img{
-        width: 36px;
-        height: 36px;
-    }
-  /* social media component media styles end */
-}
+  .social_media_component {
+    gap: 17px;
+  }
+
+  .social_media_title {
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .social_media_icon_body {
+    justify-content: center;
+    gap: 24.47px;
+  }
+
+  .social_media_icon_body a img {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  }}
