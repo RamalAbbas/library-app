@@ -92,6 +92,22 @@
     width:100%;
     padding: 0 15px;
   }
+
+  /* admin start */
+    .admin_header{
+      display: none ;
+    }
+    .admin_sidebar{
+      display: none;
+    }
+    .admin_mobil_header{
+      display: flex;
+    }
+  /* admin end */
+}
+
+@media screen and (max-width: 769px){
+  
 }
 
 @media screen and (max-width: 675px) {

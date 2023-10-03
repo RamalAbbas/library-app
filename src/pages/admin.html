@@ -34,7 +34,10 @@
                     </div>
                     <div class="sidebar_item">
                         <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
-                        <p class="sidebar_item_title">Contact</p>
+                        <!-- <p class="sidebar_item_title">Contact</p> -->
+                        <a class="sidebar_item_title" href="#ABC">
+                            Contact
+                        </a>
                     </div>
                     <div class="sidebar_item">
                         <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
@@ -45,6 +48,62 @@
             </div>
 
             <div class="admin_main">
+                <div class="admin_mobil_header">
+                    <div class="admin_mobil_logo">
+                        <img src="../assest/icons/logo/logo.svg" alt="">
+                    </div>
+                    <div id="admin_mobil_menu" class="admin_mobil_menu">
+                        <img src="../assest/icons/menu/menu.svg" alt="">
+                    </div>
+                    <div id="admin_overlay" class="admin_overlay">
+                        <div class="admin_overlay_body">
+                            <div class="admin_overlay_header">
+                                <div>
+                                    <img src="../assest/icons/logo/white-logo.svg" alt="">
+                                </div>
+                                <div>
+                                    <img id="admin_close_icon" class="admin_close_icon" src="../assest/icons/menu/close.svg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="admin_overlay_main">
+                                <ul>
+                                    <li class="admin_overlay_item">
+                                        <img width="23" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="">
+                                        <a href="">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class="admin_overlay_item">
+                                        <img width="23" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="">
+                                        <a href="">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li class="admin_overlay_item">
+                                        <img width="23" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="">
+                                        <a href="">
+                                            Join
+                                        </a>
+                                    </li>
+                                    <li class="admin_overlay_item">
+                                        <img width="23" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="">
+                                        <a href="">
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li class="admin_overlay_item">
+                                        <img width="23" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="">
+                                        <a href="">
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="admin_header">
                     <img class="admin_user_icon" src="../assest/icons/admin/user/user.svg" alt="">
                     <p class="admin_user_name">
@@ -201,7 +260,7 @@
                     </table>
                 </div>
 
-                <div class="admin_add_information">
+                <div id="ABC" class="admin_add_information">
                     <p class="admin_form_bold_title">
                         Contact Us
                     </p>
@@ -254,7 +313,7 @@
     <script type="module" src="../assest/js/helper/firebase-helper.js"></script>
     <script src="../assest/js/dom/selector.js"></script>
     <script src="../assest/js/dom/event.js"></script>
+    <script src="../assest/js/dom/admin-menu.js"></script>
     <script src="../assest/js/admin/admin.js"></script>
 </body>
-
 </html>

@@ -31,28 +31,35 @@
           <a href="./src/pages/search-page.html"> Search </a>
         </li>
       </ul>
+
+
       <div class="header_authentication">
         <button id="join-btn" class="header_join-btn">
           <img src="./src/assest/icons/authentication/user.svg" alt="" />
           Join us
         </button>
       </div>
+
       <div id="modal_body" class="modal_body">
         <div class="modal_main">
           <p class="modal_head_title">Join Us</p>
           <form class="modal_form" action="">
             <div class="modal_form_input_group">
-              <input placeholder="Full name" class="modal_input" type="text" />
-              <input placeholder="Email" class="modal_input" type="text" />
+              <input placeholder="Full name" id="fullname_input" class="modal_input" type="text" />
+              <input placeholder="Email" id="email_input" class="modal_input" type="email" />
             </div>
-            <button class="modal_join_btn">Join</button>
+            <button id="join_btn" class="modal_join_btn">Join</button>
           </form>
         </div>
       </div>
+
+
+
       <div class="header_mobile_body">
         <div id="header_menu" class="header_menu">
           <img src="./src/assest/icons/menu/menu.svg" alt="" />
         </div>
+
         <div id="overlay" class="overlay">
           <img id="close_icon" class="close_icon" src="./src/assest/icons/menu/close.svg" alt="" />
           <div class="menu_list">
@@ -76,6 +83,7 @@
           </div>
         </div>
       </div>
+      
     </nav>
   </header>
   <main class="homepage-container">
@@ -193,6 +201,7 @@
       All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
     </p>
   </footer>
+  <script type="module" src="./src/assest/js/helper/firebase-helper.js"></script>
   <script src="./src/assest/js/dom/hamburger-menu.js"></script>
   <script src="./src/assest/js/dom/modal.js"></script>
 </body>
