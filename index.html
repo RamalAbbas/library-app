@@ -1,220 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-    <link rel="stylesheet" href="./src/assest/styles/main.css" />
-  </head>
-  <body>
-    <header id="header">
-      <nav class="header_navbar">
-        <div class="header_navbar_brand">
-          <img
-            class="header_navbar_logo"
-            src="./src/assest/icons/logo/logo.svg"
-            alt=""
-          />
-        </div>
 
-        <ul class="header_nav">
-          <li class="header_nav_item active">
-            <a href="#"> Home </a>
-          </li>
-          <li class="header_nav_item">
-            <a href="./src/pages/catalog-page.html"> Catalog </a>
-          </li>
-          <li class="header_nav_item">
-            <a href="./src/pages/about.html"> About Store </a>
-          </li>
-          <li class="header_nav_item">
-            <a href="./src/pages/contact.html"> Contact Us </a>
-          </li>
-          <li class="header_nav_item">
-            <a href="./src/pages/search-page.html"> Search </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="stylesheet" href="./src/assest/styles/main.css" />
+</head>
+
+<body>
+  <header id="header">
+    <nav class="header_navbar">
+      <div class="header_navbar_brand">
+        <img class="header_navbar_logo" src="./src/assest/icons/logo/logo.svg" alt="" />
+      </div>
+      <ul class="header_nav">
+        <li class="header_nav_item active">
+          <a href="#"> Home </a>
+        </li>
+        <li class="header_nav_item">
+          <a href="./src/pages/catalog-page.html"> Catalog </a>
+        </li>
+        <li class="header_nav_item">
+          <a href="./src/pages/about.html"> About Store </a>
+        </li>
+        <li class="header_nav_item">
+          <a href="./src/pages/contact.html"> Contact Us </a>
+        </li>
+        <li class="header_nav_item">
+          <a href="./src/pages/search-page.html"> Search </a>
+        </li>
+      </ul>
+      <div class="header_authentication">
+        <button id="join-btn" class="header_join-btn">
+          <img src="./src/assest/icons/authentication/user.svg" alt="" />
+          Join us
+        </button>
+      </div>
+      <div id="modal_body" class="modal_body">
+        <div class="modal_main">
+          <p class="modal_head_title">Join Us</p>
+          <form class="modal_form" action="">
+            <div class="modal_form_input_group">
+              <input placeholder="Full name" class="modal_input" type="text" />
+              <input placeholder="Email" class="modal_input" type="text" />
+            </div>
+            <button class="modal_join_btn">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="header_mobile_body">
+        <div id="header_menu" class="header_menu">
+          <img src="./src/assest/icons/menu/menu.svg" alt="" />
+        </div>
+        <div id="overlay" class="overlay">
+          <img id="close_icon" class="close_icon" src="./src/assest/icons/menu/close.svg" alt="" />
+          <div class="menu_list">
+            <ul class="menu_nav">
+              <li class="menu_item">
+                <a href=""> Акции </a>
+              </li>
+              <li class="menu_item">
+                <a href=""> О магазине </a>
+              </li>
+              <li class="menu_item">
+                <a href=""> Каталлог </a>
+              </li>
+              <li class="menu_item">
+                <a href=""> Доставка </a>
+              </li>
+              <li class="menu_item">
+                <a href=""> Блог </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="homepage-container">
+    <div class="header-buttom">
+      <div class="group-1">
+        <h2 class="group1-title">Books from A to Z</h2>
+        <p>
+          In our store you can find a book for every taste. A large
+          assortment. Nice prices. Interesting stories.
+        </p>
+        <a href="./src/pages/catalog-page.html">Go to catalog</a>
+      </div>
+      <div class="group-2">
+        <img src="./src/assest/images/Homepage/group.svg" alt="Books" />
+      </div>
+    </div>
+    <div class="catalog-link-group">
+      <h3 class="title">Catalog</h3>
+      <div class="link-group">
+        <div class="catalog-link"><a href="#">Books</a></div>
+        <div class="catalog-link"><a href="#">Electronic books</a></div>
+        <div class="catalog-link"><a href="#">Audiobooks</a></div>
+        <div class="catalog-link"><a href="#">Toys, creativity</a></div>
+        <div class="catalog-link"><a href="#">Book accessories</a></div>
+        <div class="catalog-link"><a href="#">Notepads</a></div>
+        <div class="catalog-link"><a href="#">Board games</a></div>
+        <div class="catalog-link"><a href="#">Present</a></div>
+        <div class="catalog-link"><a href="#">Stock</a></div>
+      </div>
+    </div>
+    <div class="about-str-sec">
+      <h4 class="about-title title">About Store</h4>
+      <div class="about-des">
+        <div>
+          <p class="astore-num">35</p>
+          <p class="astore-title">Branches the country</p>
+        </div>
+        <div>
+          <p class="astore-num">898</p>
+          <p class="astore-title">Products catalog</p>
+        </div>
+        <div>
+          <p class="astore-num">8659</p>
+          <p class="astore-title">Buyers</p>
+        </div>
+        <div>
+          <p class="astore-num">72</p>
+          <p class="astore-title">Hours delivery to cities</p>
+        </div>
+      </div>
+    </div>
+    <div class="delivery-sec">
+      <h5 class="title">Delivery</h5>
+      <p class="delivery-text">
+        We work without holidays and weekends! Residents of Kiev can receive
+        an order on the day of its registration. Customers from other cities
+        of Ukraine can receive an order within 1-5 days, depending on the
+        location of the settlement and the selected delivery method. Orders
+        over UAH 1000 are delivered free of charge *. You can see the
+        available methods, exact terms and cost of delivery during checkout in
+        the order basket, aafter selecting the delivery city. More details
+      </p>
+    </div>
+    <div class="social_media_component">
+      <p class="social_media_title">Follow us on social media</p>
+      <div class="social_media_icon_body">
+        <a href="https://www.facebook.com/">
+          <img src="./src/assest/icons/social-media/facebook.svg" alt="" />
+        </a>
+        <a href="https://twitter.com/">
+          <img src="./src/assest/icons/social-media/twitter.svg" alt="" />
+        </a>
+        <a href="https://www.instagram.com/">
+          <img src="./src/assest/icons/social-media/instagram.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="./src/assest/icons/footer/logo/logo.svg" alt="" />
+      </div>
+      <div class="footer_nav">
+        <ul class="footer_list">
+          <p class="footer_list_head_item">Popular</p>
+          <li class="footer_nav_item">
+            <a href=""> Programming </a>
+            <a href=""> Books For Children </a>
+            <a href=""> Psychology </a>
+            <a href=""> Business </a>
           </li>
         </ul>
-
-        <div class="header_authentication">
-          <button id="join-btn" class="header_join-btn">
-            <img src="./src/assest/icons/authentication/user.svg" alt="" />
-            Join us
-          </button>
-        </div>
-
-        <div id="modal_body" class="modal_body">
-          <div class="modal_main">
-            <p class="modal_head_title">Join Us</p>
-            <form class="modal_form" action="">
-              <div class="modal_form_input_group">
-                <input
-                  placeholder="Full name"
-                  class="modal_input"
-                  type="text"
-                />
-                <input placeholder="Email" class="modal_input" type="text" />
-              </div>
-              <button class="modal_join_btn">Join</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="header_mobile_body">
-          <div id="header_menu" class="header_menu">
-            <img src="./src/assest/icons/menu/menu.svg" alt="" />
-          </div>
-          <div id="overlay" class="overlay">
-            <img
-              id="close_icon"
-              class="close_icon"
-              src="./src/assest/icons/menu/close.svg"
-              alt=""
-            />
-
-            <div class="menu_list">
-              <ul class="menu_nav">
-                <li class="menu_item">
-                  <a href=""> Акции </a>
-                </li>
-                <li class="menu_item">
-                  <a href=""> О магазине </a>
-                </li>
-                <li class="menu_item">
-                  <a href=""> Каталлог </a>
-                </li>
-                <li class="menu_item">
-                  <a href=""> Доставка </a>
-                </li>
-                <li class="menu_item">
-                  <a href=""> Блог </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main class="homepage-container">
-      <div class="header-buttom">
-        <div class="group-1">
-          <h2 class="group1-title">Books from A to Z</h2>
-          <p>
-            In our store you can find a book for every taste. A large
-            assortment. Nice prices. Interesting stories.
-          </p>
-          <a href="./src/pages/catalog-page.html">Go to catalog</a>
-        </div>
-        <div class="group-2">
-          <img src="./src/assest/images/Homepage/group.svg" alt="Books" />
-        </div>
+        <ul class="footer_list">
+          <p class="footer_list_head_item">Popular</p>
+          <li class="footer_nav_item">
+            <a href=""> Programming </a>
+            <a href=""> Books For Children </a>
+            <a href=""> Psychology </a>
+            <a href=""> Business </a>
+          </li>
+        </ul>
+        <ul class="footer_list">
+          <p class="footer_list_head_item">Popular</p>
+          <li class="footer_nav_item">
+            <a href=""> Programming </a>
+            <a href=""> Books For Children </a>
+            <a href=""> Psychology </a>
+            <a href=""> Business </a>
+          </li>
+        </ul>
       </div>
-      <div class="catalog-link-group">
-        <h3 class="title">Catalog</h3>
-        <div class="link-group">
-          <div class="catalog-link"><a href="#">Books</a></div>
-          <div class="catalog-link"><a href="#">Electronic books</a></div>
-          <div class="catalog-link"><a href="#">Audiobooks</a></div>
-          <div class="catalog-link"><a href="#">Toys, creativity</a></div>
-          <div class="catalog-link"><a href="#">Book accessories</a></div>
-          <div class="catalog-link"><a href="#">Notepads</a></div>
-          <div class="catalog-link"><a href="#">Board games</a></div>
-          <div class="catalog-link"><a href="#">Present</a></div>
-          <div class="catalog-link"><a href="#">Stock</a></div>
-        </div>
-      </div>
-      <div class="about-str-sec">
-        <h4 class="about-title title">About Store</h4>
-        <div class="about-des">
-          <div>
-            <p class="astore-num">35</p>
-            <p class="astore-title">Branches the country</p>
-          </div>
-          <div>
-            <p class="astore-num">898</p>
-            <p class="astore-title">Products catalog</p>
-          </div>
-          <div>
-            <p class="astore-num">8659</p>
-            <p class="astore-title">Buyers</p>
-          </div>
-          <div>
-            <p class="astore-num">72</p>
-            <p class="astore-title">Hours delivery to cities</p>
-          </div>
-        </div>
-      </div>
-      <div class="delivery-sec">
-        <h5 class="title">Delivery</h5>
-        <p class="delivery-text">
-          We work without holidays and weekends! Residents of Kiev can receive
-          an order on the day of its registration. Customers from other cities
-          of Ukraine can receive an order within 1-5 days, depending on the
-          location of the settlement and the selected delivery method. Orders
-          over UAH 1000 are delivered free of charge *. You can see the
-          available methods, exact terms and cost of delivery during checkout in
-          the order basket, aafter selecting the delivery city. More details
-        </p>
-      </div>
-      <div class="social_media_component">
-        <p class="social_media_title">Follow us on social media</p>
-        <div class="social_media_icon_body">
-          <a href="https://www.facebook.com/">
-            <img src="./src/assest/icons/social-media/facebook.svg" alt="" />
-          </a>
-          <a href="https://twitter.com/">
-            <img src="./src/assest/icons/social-media/twitter.svg" alt="" />
-          </a>
-          <a href="https://www.instagram.com/">
-            <img src="./src/assest/icons/social-media/instagram.svg" alt="" />
-          </a>
-        </div>
-      </div>
-    </main>
+    </div>
+    <p class="footer-title">
+      All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
+    </p>
+  </footer>
+  <script src="./src/assest/js/dom/hamburger-menu.js"></script>
+  <script src="./src/assest/js/dom/modal.js"></script>
+</body>
 
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="footer-logo">
-          <img src="./src/assest/icons/footer/logo/logo.svg" alt="" />
-        </div>
-
-        <div class="footer_nav">
-          <ul class="footer_list">
-            <p class="footer_list_head_item">Popular</p>
-            <li class="footer_nav_item">
-              <a href=""> Programming </a>
-              <a href=""> Books For Children </a>
-              <a href=""> Psychology </a>
-              <a href=""> Business </a>
-            </li>
-          </ul>
-
-          <ul class="footer_list">
-            <p class="footer_list_head_item">Popular</p>
-            <li class="footer_nav_item">
-              <a href=""> Programming </a>
-              <a href=""> Books For Children </a>
-              <a href=""> Psychology </a>
-              <a href=""> Business </a>
-            </li>
-          </ul>
-
-          <ul class="footer_list">
-            <p class="footer_list_head_item">Popular</p>
-            <li class="footer_nav_item">
-              <a href=""> Programming </a>
-              <a href=""> Books For Children </a>
-              <a href=""> Psychology </a>
-              <a href=""> Business </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <p class="footer-title">
-        All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
-      </p>
-    </footer>
-
-    <script type="module" src="./src/assest/js/app.js"></script>
-  </body>
 </html>

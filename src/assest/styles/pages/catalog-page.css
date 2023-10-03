@@ -1,16 +1,23 @@
 /** main-head */
+.catalog_container {
+  padding-left: 13.44%;
+  padding-right: 13.44%;
+}
+
 main {
   background-color: #fffaf5;
 }
+
 .main-head {
   padding-top: 140px;
   margin-bottom: 50px;
   display: flex;
   list-style: none;
-  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 271px;
 }
+
 .allBooksWord {
   color: var(--, #241400);
   /* Заголовок h2 */
@@ -18,8 +25,10 @@ main {
   font-size: 25px;
   font-style: normal;
   font-weight: 900;
-  line-height: 196.187%; /* 49.047px */
+  line-height: 196.187%;
+  /* 49.047px */
 }
+
 .categorys ul {
   display: flex;
   list-style: none;
@@ -31,16 +40,29 @@ main {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 196.187%; /* 25.504px */
+  line-height: 196.187%;
+  /* 25.504px */
 }
+
 /** boxs */
 
 .BooksSlider {
   display: flex;
-  gap: 60px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  position: relative;
 }
+
+.slider_left_arrow {
+  position: absolute;
+  left: -53px;
+}
+
+.slider_right_arrow {
+  position: absolute;
+  right: -53px;
+}
+
 .book-box {
   width: 184px;
   height: 332px;
@@ -53,9 +75,11 @@ main {
 
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 }
+
 .book-box a {
   text-decoration: none;
 }
+
 .book-in-text1 {
   width: 113px;
   height: 18px;
@@ -64,16 +88,20 @@ main {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 196.187%; /* 27.466px */
+  line-height: 196.187%;
+  /* 27.466px */
 }
+
 .book-in-text2 {
   color: var(--fontColor);
   font-family: Montserrat;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 196.187%; /* 23.542px */
+  line-height: 196.187%;
+  /* 23.542px */
 }
+
 .book-read-more {
   border-radius: 3px;
   background: var(--2, #e16a00);
@@ -88,6 +116,7 @@ main {
   text-transform: uppercase;
   padding: 2px 26px;
 }
+
 .BestSeller-head {
   display: flex;
   justify-content: center;
@@ -98,11 +127,13 @@ main {
   font-size: 25px;
   font-style: normal;
   font-weight: 900;
-  line-height: 196.187%; /* 49.047px */
+  line-height: 196.187%;
+  /* 49.047px */
 
   margin-top: 128px;
   margin-bottom: 50px;
 }
+
 .NewReleases-head {
   display: flex;
   justify-content: center;
@@ -113,9 +144,9 @@ main {
   font-size: 25px;
   font-style: normal;
   font-weight: 900;
-  line-height: 196.187%; /* 49.047px */
+  line-height: 196.187%;
+  /* 49.047px */
 
   margin-top: 128px;
   margin-bottom: 50px;
 }
-

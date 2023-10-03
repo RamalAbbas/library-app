@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Page</title>
     <link rel="stylesheet" href="../assest/styles/main.css" />
-    <script  defer src="../assest/js/app.js" type="module"></script>
 </head>
+
 <body>
     <header class="container" id="header">
         <nav class="header_navbar">
@@ -90,41 +91,60 @@
     </header>
 
     <main>
-      <section class="search">
-        <h1>Search</h1>
-        <div><p>Order in Chaos</p></div>
-        <button>Search</button>
-      </section>
-      <section class="slider">
-        <img src="../assest/images/search-page/book.svg" alt="book" />
-        <div class="writing">
-          <h1>Order in Chaos</h1>
-          <h2>Konstantin Koptelov</h2>
-          <p>
-            We work without holidays and weekends! Residents of Kiev can <br> receive an order on the day of its registration. Customers from <br> other cities of Ukraine can receive an order within 1-5 days, <br> depending on the location of the settlement and the selected <br> delivery method. Orders over UAH 1000 are delivered free of <br> charge *. You can see the available methods, exact terms and <br> cost of delivery during checkout in the order basket, after <br> <br> selecting the delivery city
-          </p>
+        <div class="search_container">
+            <section class="search">
+                <h1>Search</h1>
+                <input class="order_input" placeholder="Order in Chaos" type="text">
+                <button>Search</button>
+            </section>
+            <section class="slider">
+                <div class="order_slider_arrow_left">
+                    <svg width="17" height="48" viewBox="0 0 17 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.7925 1L1 24L15.7925 47" stroke="#720418" />
+                    </svg>
+                </div>
+
+                <img src="../assest/images/search-page/book.svg" alt="book" />
+
+                <div class="writing">
+                    <h2>Konstantin Koptelov</h2>
+                    <p>
+                        We work without holidays and weekends! Residents of Kiev can <br> receive an order on the day of
+                        its registration. Customers from <br> other cities of Ukraine can receive an order within 1-5
+                        days, <br> depending on the location of the settlement and the selected <br> delivery method.
+                        Orders over UAH 1000 are delivered free of <br> charge *. You can see the available methods,
+                        exact terms and <br> cost of delivery during checkout in the order basket, after <br> <br>
+                        selecting the delivery city
+                    </p>
+                </div>
+
+                <div class="order_slider_arrow_right">
+                    <svg width="17" height="48" viewBox="0 0 17 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.20755 1L16 24L1.20755 47" stroke="#720418" />
+                    </svg>
+                </div>
+            </section>
         </div>
-      </section>
     </main>
 
     <div class="social_media_component">
         <p class="social_media_title">
-          Follow us on social media
+            Follow us on social media
         </p>
         <div class="social_media_icon_body">
             <a href="https://www.facebook.com/">
-              <img src="../assest/icons/social-media/facebook.svg" alt="">
+                <img src="../assest/icons/social-media/facebook.svg" alt="">
             </a>
             <a href="https://twitter.com/">
-              <img src="../assest/icons/social-media/twitter.svg" alt="">
+                <img src="../assest/icons/social-media/twitter.svg" alt="">
             </a>
             <a href="https://www.instagram.com/">
-              <img src="../assest/icons/social-media/instagram.svg" alt="">
+                <img src="../assest/icons/social-media/instagram.svg" alt="">
             </a>
         </div>
     </div>
-        
-        
+
+
     <footer id="footer">
         <div class="footer-top">
             <div class="footer-logo">
@@ -132,7 +152,7 @@
             </div>
 
             <div class="footer_nav">
-                <ul class="footer_list">    
+                <ul class="footer_list">
                     <p class="footer_list_head_item">
                         Popular
                     </p>
@@ -152,7 +172,7 @@
                     </li>
                 </ul>
 
-                <ul class="footer_list">    
+                <ul class="footer_list">
                     <p class="footer_list_head_item">
                         Popular
                     </p>
@@ -172,7 +192,7 @@
                     </li>
                 </ul>
 
-                <ul class="footer_list">    
+                <ul class="footer_list">
                     <p class="footer_list_head_item">
                         Popular
                     </p>
@@ -197,5 +217,10 @@
             All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
         </p>
     </footer>
+
+
+    <script src="../assest/js/dom/hamburger-menu.js"></script>
+    <script src="../assest/js/dom/modal.js"></script>
 </body>
+
 </html>
