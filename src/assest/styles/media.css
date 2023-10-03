@@ -37,6 +37,9 @@
     margin: 40px 0;
     text-align: center;
   }
+  .delivery-text {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -76,6 +79,18 @@
   footer {
     padding-left: 5%;
     padding-right: 5%;
+  }
+  .about-des {
+    flex-direction: column;
+  }
+  .link-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .homepage-container {
+    width:100%;
+    padding: 0 15px;
   }
 }
 
@@ -138,12 +153,16 @@
   .about_description {
     font-size: 12px;
   }
-  /*  */ contactpage 
   .container {
+  /* contactpage  */ 
+  .contactMain{
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
-
+  .contactUs{
+    width: 243px;
+  }
   .contact_h1 {
     font-size: 25px;
     text-align: center;
@@ -158,6 +177,7 @@
     flex-direction: column;
     gap: 33px;
   }
+  
 
   .contactUs input {
     width: 243px;
@@ -167,11 +187,18 @@
     font-size: 16px;
     font-weight: 400;
     color: #241400;
+    padding: 15px;
+
   }
 
   textarea {
     display: none;
   }
+ #contactTextarea{padding: 15px;
+font-size: 16px;
+color: #241400;
+height: 120px;
+}
 
   .sendButton {
     width: 243px;
@@ -181,6 +208,10 @@
     font-size: 16px;
     font-weight: 400;
   }
+
+  .message{
+  font-size: 12px;}
+  
     /*  ---Homepage--- */
   main {
     width:100%;
@@ -248,7 +279,8 @@
   }
 
   .delivery-sec p {
-    margin-top: 12px;
+    margin:12px 0 0 0;
+
   }
 
   .media-section {
@@ -289,8 +321,6 @@
     height: 36px;
   }
 
- 
 
 
   /* social media component media styles end */
-}
