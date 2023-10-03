@@ -2,6 +2,7 @@ let searchBook = (book_name) => {
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${book_name}`)
         .then((res) => res.json())
         .then((data) => {
+            console.log(data);
             let book_result = data.items.map((book_item) =>
                 `
                     <div data-book-id='${book_item.id}' onclick="getData('${book_item.id}')" id="admin_result_item" class="admin_result_item">
