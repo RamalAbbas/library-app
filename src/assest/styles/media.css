@@ -195,13 +195,11 @@
   }
   .container {
   /* contactpage  */ 
-  .contactMain{
+  
+  .contactUs {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .contactUs{
-    width: 243px;
   }
   .contact_h1 {
     font-size: 25px;
@@ -210,6 +208,8 @@
 
   .formDiv {
     flex-direction: column;
+    width: 243px;
+
   }
 
   .firstFormDiv {
@@ -231,17 +231,17 @@
 
   }
 
-  textarea {
-    display: none;
-  }
- #contactTextarea{padding: 15px;
+ #contactTextarea{
+  padding: 15px;
 font-size: 16px;
 color: #241400;
-height: 120px;
+height: 101px;
 }
-
+.buttonDiv{
+  width: 243px;
+}
   .sendButton {
-    width: 243px;
+    width: 100%;
     margin-bottom: 69px;
     border-radius: 5px;
     height: 39px;
