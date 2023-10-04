@@ -162,11 +162,37 @@
                                 placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
                                 id="" cols="30" rows="10"></textarea>
                         </div>
+                        <div class="admin_form_item admin_check_item">
+                            <input class="admin_check_input" type="checkbox" name="" id="check_input">
+                            <label for="check_input">New</label>
+                        </div>
                         <div class="admin_form_item">
                             <label class="admin_form_label" for="">
                                 Book Type
+
+                                <button id="add_book_type" class="add_book_type">
+                                    +
+                                </button>
+
+                                <div id="admin_book_overlay" class="admin_book_overlay">
+                                    <div class="admin_book_overlay_main">
+                                        <div class="admin_form_item">
+                                            <label for="type_input" class="admin_form_label">Add Type</label>
+                                            <input id="type_input" class="admin_form_input" type="text">
+                                        </div>
+                                        <button id="add_type_button" class="add_book">Add Type</button>
+                                    </div>
+                                </div>
                             </label>
-                            <input id="book_type_input" class="admin_form_input" placeholder="Fantastic" type="text">
+                            <div class="admin_form_dropdown" id="">
+                                <div id="admin_dropdown_active_item" class="admin_dropdown_active_item">
+                                    Test
+                                </div>
+
+                                <div id="admin_dropdown_item_main" class="admin_dropdown_item_main">
+                                    
+                                </div>
+                            </div>
                         </div>
                         <button id="add_book_btn" class="admin_add_button">
                             Add
@@ -240,17 +266,7 @@
                                     <th>Author</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="mobil-id">1</td>
-                                    <td class="custom_td">
-                                        <img src="../assest/icons/admin/table/card_img.svg" alt="">
-                                        Angels
-                                    </td>
-                                    <td>Lorem ipsum test...</td>
-                                    <td>Dedectiv</td>
-                                    <td>Dan Brown</td>
-                                </tr>
+                            <tbody id="books_tbody">
                             </tbody>
                         </table>
                     </div>
@@ -308,10 +324,12 @@
         </div>
     </main>
 
-    <script type="module" src="../assest/js/helper/firebase-helper.js"></script>
     <script src="../assest/js/dom/selector.js"></script>
     <script src="../assest/js/dom/event.js"></script>
     <script src="../assest/js/dom/admin-menu.js"></script>
     <script src="../assest/js/admin/admin.js"></script>
+    <script src="../assest/js/dropdown/dropdown.js"></script>
+    <script type="module" src="../assest/js/admin/admin_firebase.js"></script>
+    <script type="module" src="../assest/js/helper/firebase-helper.js"></script>
 </body>
 </html>
