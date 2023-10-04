@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getDatabase , ref , push , onValue} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import { getDatabase , ref , push , onValue , remove } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -19,26 +19,49 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+
+
+
+// join us start
+
 const users = ref(db,"users")
 
 // selector
 let fullname_input = document.querySelector("#fullname_input")
 let email_input = document.querySelector("#email_input")
 let join_btn = document.querySelector("#join_btn")
-
+let join_tbody = document.querySelector("#join_tbody")
 
 join_btn?.addEventListener('click',function(e){
     e.preventDefault();
-    let userInformation = {
+    if(email_input.value == 0 || fullname_input.value == 0){
+        alert("formu doldurun")
+    }else{
+      let userInformation = {
         fullname: fullname_input.value,
         email: email_input.value
+      }
+      push(users,userInformation)
+      fullname_input.value = ""
+      email_input.value = ""
     }
-    push(users,userInformation)
-    fullname_input.value = ""
-    email_input.value = ""
 })
 
 onValue(users, (snapshot) => {
   const data = snapshot.val();
-  console.log(Object.entries(data));
+  let dataToArr = Object.entries(data)
+  let dataItem = dataToArr.map((item) => `
+        <tr>
+          <td class="mobil-id">1</td>
+          <td>${item[1].fullname}</td>
+          <td>${item[1].email}</td>
+          </td>
+        </tr>
+      `
+  ).join("")
+  join_tbody.innerHTML += dataItem  
 });
+
+
+// join us over
+
