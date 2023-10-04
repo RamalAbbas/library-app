@@ -16,6 +16,7 @@
 @import './pages/search.css';
 @import './pages/book.css';
 @import './pages/admin.css';
+@import './pages/login.css';
 
 /* component */
 @import './components/footer.css';

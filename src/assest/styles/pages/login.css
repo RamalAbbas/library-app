@@ -1,0 +1,60 @@
+
+.sidebar_logo2{
+    padding-left:  35px;
+     padding-top: 74.96px;
+     /* background-color: brown; */
+ }
+ 
+ 
+ 
+ .login_container{
+     background-color:brown;
+ /* height: 100; */
+ /* position: relative; */
+ 
+ }
+ .login_form{
+     width: 46%;
+     height: 544px;
+     margin-left: 30%;
+     padding-left: 54px;
+     padding-right: 54px;
+ padding-top: 75px;
+     margin-top: 100px;
+     background-color:#fff;
+ }
+ 
+ .login_inputdiv input{
+ height: 74px;
+ padding-left: 52px;
+ border:1px solid #cecece;
+ background-color: #fff;
+font-size: 19px;}
+ .login_form h1{
+ font-family: var(--fontMontserrat);
+     font-size: 44px;
+     font-style: normal;
+     color: #000;
+     text-align: center;
+     font-weight: 700;
+     line-height: normal;
+     margin-bottom: 40px;
+ }
+ .login_inputdiv{display: grid;
+     gap: 34px;
+ 
+ }
+ .login_joinbtn{
+     width: 100%;
+     height: 74px;
+     background-color: #E16A00;
+     border:  1px solid #CECECE;
+     border-radius: 5px;
+ 
+ margin-top: 84px;
+ margin-bottom: 34px;
+ color: #fff;
+ font-size: 19px;
+ font-weight: 700px;
+ cursor: pointer;}
+ 
