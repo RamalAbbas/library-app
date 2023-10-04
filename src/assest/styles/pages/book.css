@@ -5,12 +5,30 @@
     padding-left: 13.25%;
     padding-right: 11.38%;
     padding-top: 173px;
-    background-color: #FFFAF5;
+    background-color: #fffaf5;
+
 }
 
 .book_top {
     display: flex;
     gap: 141px;
+    width: 82%;
+    flex-direction: column;
+
+
+}
+
+.containerr {
+    width: 73%;
+    position: relative;
+
+
+}
+
+.book_img {
+    width: 30px;
+    position: absolute;
+    right: 0;
 }
 
 .book_text {
@@ -78,6 +96,14 @@
     font-weight: 700;
     margin-bottom: 5px;
 }
+
+
+
+
+
+
+
+
 
 .book_writer {
     margin-top: 8px;
