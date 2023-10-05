@@ -1,10 +1,11 @@
+let globalData;
 let searchBook = (book_name) => {
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${book_name}`)
         .then((res) => res.json())
         .then((data) => {
             let book_result = data.items.map((book_item) =>
                 `
-                    <div data-book-id='${book_item.id}' onclick="getData('${book_item.id}')" id="admin_result_item" class="admin_result_item">
+                    <div onclick="getData('${book_item.id}')" id="admin_result_item" class="admin_result_item">
                         <img src="../assest/icons/admin/search/history.svg" alt="">
                         ${book_item.volumeInfo.title}
                     </div>
@@ -14,24 +15,29 @@ let searchBook = (book_name) => {
     });
 }
 
+
+
 let getData = (bookId) => {
     fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`)
     .then((res) => res.json())
     .then((data) => {
-        book_name_input.placeholder = data.volumeInfo.title
-        book_author_input.placeholder = data.volumeInfo.authors[0]
-        book_img_input.placeholder = data.volumeInfo.infoLink
-        book_description_textarea.placeholder = data.volumeInfo.description
-        book_type_input.placeholder = data.volumeInfo.industryIdentifiers.map((item) =>  item.type)
+        console.log(data.volumeInfo)
+        book_name_input.value = data.volumeInfo.title
+        book_author_input.value = data.volumeInfo.authors[0]
+        book_img_input.value = data.volumeInfo.imageLinks?.thumbnail
+        book_description_textarea.value = removeTags(data.volumeInfo.description)
         admin_search_input.value = data.volumeInfo.title
-        add_book_btn.addEventListener('click',function(e){
-            e.preventDefault()
-            sendData(data)
-        })
+        globalData = data
     });
 }
 
+add_book_type.addEventListener('click',function(e){
+    e.preventDefault()
+    admin_book_overlay.classList.add("show")
+})
 
-let sendData = (book_data) => {
-    console.log(book_data);
-}
+add_type_button.addEventListener('click',function(e){
+    e.preventDefault()
+    admin_dropdown_active_item.innerText = type_input.value
+    admin_book_overlay.classList.remove("show")
+})

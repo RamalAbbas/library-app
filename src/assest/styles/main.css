@@ -7,6 +7,7 @@
 /* component */
 @import './components/header.css';
 @import './components/social-media.css';
+@import './components/dropdown.css';
 
 /* pages */
 @import './pages/homepage.css';
@@ -16,6 +17,7 @@
 @import './pages/search.css';
 @import './pages/book.css';
 @import './pages/admin.css';
+@import './pages/login.css';
 
 /* component */
 @import './components/footer.css';
