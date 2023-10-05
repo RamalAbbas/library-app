@@ -15,8 +15,6 @@ let searchBook = (book_name) => {
     });
 }
 
-
-
 let getData = (bookId) => {
     fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`)
     .then((res) => res.json())
