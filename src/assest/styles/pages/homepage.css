@@ -48,7 +48,10 @@ body {
 .group-2 {
     margin: 46px 0 70px 100px;
 }
-
+.group-2 img {
+    object-fit: cover;
+    width: 100%;
+}
 .group-1 a {
     width: 212px;
     height: 50px;
