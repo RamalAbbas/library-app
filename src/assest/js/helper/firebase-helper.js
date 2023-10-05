@@ -46,7 +46,6 @@ onValue(users, (snapshot) => {
           <td class="mobil-id">1</td>
           <td>${item[1].fullname}</td>
           <td>${item[1].email}</td>
-          </td>
         </tr>
       `
   ).join("")

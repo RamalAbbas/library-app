@@ -19,16 +19,16 @@ const catalog = ref(db,"catalog")
 
 // add book
 add_book_btn.addEventListener('click',function(e){
-    e.preventDefault()
-    let book = {
-        book_id:globalData.id,
-        book_name:book_name_input.value,
-        book_author:book_author_input.value,
-        book_img_url:book_img_input.value,
-        book_description:book_description_textarea.value,
-        book_is_new:is_New.checked,
-        book_type:admin_dropdown_active_item.innerText
-    }
+    let book = 
+        {
+            book_id:globalData.id,
+            book_name:book_name_input.value,
+            book_author:book_author_input.value,
+            book_img_url:book_img_input.value,
+            book_description:book_description_textarea.value,
+            book_is_new:is_New.checked,
+            book_type:admin_dropdown_active_item.innerText
+        }
     let book_type = {
         book_type:admin_dropdown_active_item.innerText
     }
@@ -38,7 +38,6 @@ add_book_btn.addEventListener('click',function(e){
 
 // read book
 let books_tbody = document.querySelector("#books_tbody")
-
 onValue(books, (snapshot) => {
     const bookData = snapshot.val();
     let bookDataToArr = Object.entries(bookData)
@@ -51,11 +50,19 @@ onValue(books, (snapshot) => {
                     ${item[1].book_name}
                 </td>
                 <td>${item[1].book_description}</td>
-                <td>${item[1].type}</td>
+                <td>${item[1].book_type}</td>
                 <td>${item[1].book_author}</td>
+                <td>
+                    <button onclick="delBook('${item[1].book_id}')">
+                        del
+                    </button>
+                </td>
             </tr>
         `
     ).join("")
     books_tbody.innerHTML += bookItem  
 });
 
+let delBook = (id) => {
+    console.log(id);
+}

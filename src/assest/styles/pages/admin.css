@@ -461,4 +461,8 @@ tr:nth-child(even) {
 .admin_book_img{
     max-height: 36px;
 }
+
+.admin_delete_title{
+    cursor: pointer;
+}
 /* admin main end */
