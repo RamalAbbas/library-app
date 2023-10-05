@@ -46,13 +46,14 @@
             <form class="modal_form" action="">
               <div class="modal_form_input_group">
                 <input
+                id="fullname_input"
                   placeholder="Full name"
                   class="modal_input"
                   type="text"
                 />
-                <input placeholder="Email" class="modal_input" type="text" />
+                <input id="email_input" placeholder="Email" class="modal_input" type="text" />
               </div>
-              <button class="modal_join_btn">Join</button>
+              <button id="join_btn" class="modal_join_btn">Join</button>
             </form>
           </div>
         </div>
@@ -207,5 +208,6 @@
     </footer>
     <script src="./src/assest/js/dom/hamburger-menu.js"></script>
     <script src="./src/assest/js/dom/modal.js"></script>
+    <script type="module" src="./src/assest/js/helper/firebase-helper.js"></script>
   </body>
 </html>

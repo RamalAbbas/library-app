@@ -23,8 +23,10 @@ let email_input = document.querySelector("#email_input")
 let join_btn = document.querySelector("#join_btn")
 let join_tbody = document.querySelector("#join_tbody")
 
+let id  = 1 
 join_btn?.addEventListener('click',function(e){
     e.preventDefault();
+
     if(email_input.value == 0 || fullname_input.value == 0){
         alert("formu doldurun")
     }else{
@@ -36,21 +38,24 @@ join_btn?.addEventListener('click',function(e){
       fullname_input.value = ""
       email_input.value = ""
     }
+
 })
 
-onValue(users, (snapshot) => {
-  const data = snapshot.val();
-  let dataToArr = Object.entries(data)
-  let dataItem = dataToArr.map((item) => `
-        <tr>
-          <td class="mobil-id">1</td>
-          <td>${item[1].fullname}</td>
-          <td>${item[1].email}</td>
-        </tr>
-      `
-  ).join("")
-  join_tbody.innerHTML += dataItem  
-});
-
+function render(){
+  onValue(users, (snapshot) => {
+    const data = snapshot.val();
+    let dataToArr = Object.entries(data)
+    let dataItem = dataToArr.map((item) => `
+          <tr>
+            <td class="mobil-id">${id++}</td>
+            <td>${item[1].fullname}</td>
+            <td>${item[1].email}</td>
+          </tr>
+        `
+    ).join("")
+    join_tbody ? join_tbody.innerHTML = dataItem   : null
+  });
+}
+render()
 
 // join us over
