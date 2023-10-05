@@ -10,3 +10,7 @@
     padding-left: 13.44% !important;
     padding-right: 5.31% !important;
 }
+
+html {
+    scroll-behavior: smooth;
+}
