@@ -6,17 +6,15 @@
  }
  
  .login_header{
-    background-color: #E16A00;
-    /* padding-right:  35px; */
-   
+    background-color:#720418
+
  }
  .login_header img{
     margin-left: 35px;
-
+    margin-top: 74px;
 }
  .login_container{
      background-color:#720418;
-     height: 100vh;
  
  }
  .login_form{
@@ -59,8 +57,9 @@ font-size: 19px;}
  
  margin-top: 84px;
  margin-bottom: 34px;
- color: #fff;
+ color:#fff;
  font-size: 19px;
  font-weight: 700px;
  cursor: pointer;}
+
  
