@@ -5,11 +5,17 @@
     
  }
  
- 
- 
+ .login_header{
+    background-color: #E16A00;
+    /* padding-right:  35px; */
+   
+ }
+ .login_header img{
+    margin-left: 35px;
+
+}
  .login_container{
      background-color:#720418;
-     background-color:brown;
      height: 100vh;
  
  }
