@@ -5,7 +5,7 @@ let searchBook = (book_name) => {
         .then((data) => {
             let book_result = data.items.map((book_item) =>
                 `
-                    <div data-book-id='${book_item.id}' onclick="getData('${book_item.id}')" id="admin_result_item" class="admin_result_item">
+                    <div onclick="getData('${book_item.id}')" id="admin_result_item" class="admin_result_item">
                         <img src="../assest/icons/admin/search/history.svg" alt="">
                         ${book_item.volumeInfo.title}
                     </div>
@@ -15,14 +15,17 @@ let searchBook = (book_name) => {
     });
 }
 
+
+
 let getData = (bookId) => {
     fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`)
     .then((res) => res.json())
     .then((data) => {
+        console.log(data.volumeInfo)
         book_name_input.value = data.volumeInfo.title
         book_author_input.value = data.volumeInfo.authors[0]
         book_img_input.value = data.volumeInfo.imageLinks?.thumbnail
-        book_description_textarea.value = data.volumeInfo.description
+        book_description_textarea.value = removeTags(data.volumeInfo.description)
         admin_search_input.value = data.volumeInfo.title
         globalData = data
     });

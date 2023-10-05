@@ -49,7 +49,13 @@ onValue(books, (snapshot) => {
                     <img class="admin_book_img" src="${item[1].book_img_url}" alt="">
                     ${item[1].book_name}
                 </td>
-                <td>${item[1].book_description}</td>
+                <td class="admin_book_description">
+                    <div class="description_body">
+                        <p class="description_item">
+                            ${item[1].book_description}
+                        </p>
+                    </div>
+                </td>
                 <td>${item[1].book_type}</td>
                 <td>${item[1].book_author}</td>
                 <td>

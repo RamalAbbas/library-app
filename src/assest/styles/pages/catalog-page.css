@@ -150,3 +150,20 @@ main {
   margin-top: 128px;
   margin-bottom: 50px;
 }
+
+.swiper-button-prev:after {
+    content: "" !important;
+}
+
+.swiper-button-next::after{
+    content: "" !important;
+}
+.swiper-button-prev{
+  position: absolute !important;
+  left: 0 !important;
+}
+
+.swiper-slide{
+  display: flex !important;
+  justify-content: center !important;
+}
