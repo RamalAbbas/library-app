@@ -197,7 +197,6 @@
   .about_description {
     font-size: 12px;
   }
-  .container {
   /* contactpage  */ 
   
   .contactUs {
@@ -255,7 +254,61 @@ height: 101px;
 
   .message{
   font-size: 12px;}
+
+/* contactpage end */
+
+/* login start */
+
+.login_form{
+  margin-left: 47px;
+  margin-right: 45px;
+  padding-left: 18px;
+  padding-right: 18px;
+  height:370px ;
+  width: 330px;
+display: flex;
+flex-direction: column;
+align-items: center;
+/* justify-content: center; */
+}
+
+.login_body{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.login_form h1{
+  font-size: 20px;
+  justify-content: center;
+margin-left: 60px;
+margin-right: 60px;
+margin-bottom: 25px;
+margin-top: -15px;
+}
+.login_inputdiv{
+  display: grid;
+  gap: 22px;
+}
+.login_inputdiv input{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding-left: 23px;
+  width: 250px;
+  height: 40px;
   
+
+}
+
+.login_joinbtn{
+  width:250px ;
+  height: 40px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+/* contact page end */
+
     /*  ---Homepage--- */
   main {
     width:100%;
@@ -358,4 +411,10 @@ height: 101px;
     width: 36px;
     height: 36px;
   }
+<<<<<<< HEAD
   }}
+=======
+
+
+  }
+>>>>>>> 12d4a00257158dc5d90ba1addaf21040924a6fbc
