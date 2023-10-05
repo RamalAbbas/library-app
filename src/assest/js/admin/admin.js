@@ -28,17 +28,10 @@ let getData = (bookId) => {
     });
 }
 
-
-let admin_book_overlay = document.querySelector("#admin_book_overlay")
-
 add_book_type.addEventListener('click',function(e){
     e.preventDefault()
     admin_book_overlay.classList.add("show")
 })
-
-
-let add_type_button = document.querySelector("#add_type_button")
-let type_input = document.querySelector("#type_input")
 
 add_type_button.addEventListener('click',function(e){
     e.preventDefault()
