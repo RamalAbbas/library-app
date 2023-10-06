@@ -32,12 +32,8 @@ add_book_btn?.addEventListener('click',function(e){
             book_is_new:is_New.checked,
             book_type:admin_dropdown_active_item.innerText
     }
-    let catalog_type = {
-        catalog_id: globalData.id,
-        catalog_type:admin_dropdown_active_item.innerText
-    }
     push(books,book)
-    push(catalog,catalog_type)
+    categoriesSorter(admin_dropdown_active_item.innerText)
 })
 let id = 1;
 // read book
@@ -45,10 +41,15 @@ function renderBook(){
     let books_tbody = document.querySelector("#books_tbody")
     onValue(books, (snapshot) => {
         const bookData = snapshot.val();
+        if(!bookData){
+            books_tbody.classList.add("d-none")
+        }else{
+            books_tbody.classList.remove("d-none")
+        }
         let bookDataToArr = Object.entries(bookData)
         let bookItem = bookDataToArr.map((item) => 
             `
-                <tr>
+                <tr class="a">
                     <td class="mobil-id">${id++}</td>
                     <td class="custom_td">
                         <img class="admin_book_img" src="${item[1].book_img_url}" alt="">
@@ -81,6 +82,7 @@ function renderBook(){
         delete_item.forEach((el) => el.addEventListener('click',function(){
             let id = el.dataset.id
             deleteBookDetail(id)
+            
         }))
     });
 }
@@ -94,9 +96,6 @@ function deleteBookDetail(id) {
 
 // book type
 
-
-
-
 function renderCatalog(){
     onValue(catalog,(snapshot) => {
         const catalogData = snapshot.val();
@@ -104,12 +103,18 @@ function renderCatalog(){
         let catalogItem = catalogDataToArr.map((item) => 
             `
             <div class="admin_dropdown_item">
-                ${item[1].catalog_type}                
+                ${item[1].bookType}                
             </div>
             `
         ).join("")
         
         admin_dropdown_item_main.innerHTML = catalogItem  
+
+        let admin_dropdown_item = document.querySelectorAll(".admin_dropdown_item")
+        admin_dropdown_item.forEach((item) => item.addEventListener('click',function(){
+            admin_dropdown_active_item.innerHTML = item.innerText
+            admin_dropdown_item_main.classList.remove("active")
+        }))
     })
 }
 renderCatalog()
@@ -158,3 +163,18 @@ function renderAbout(){
 renderAbout()
 
 
+function categoriesSorter(categories) {
+    let arr = [];
+    onValue(catalog, (snapshot) => {
+      const data = snapshot.val();
+      let catagorieArr = Object.entries(data);
+      catagorieArr.forEach((item) => {
+        arr.push(item[1].bookType);
+      });
+      if (!arr.includes(categories)) {
+        push(catalog, {
+          bookType: admin_dropdown_active_item.innerText,
+        });
+      }
+    });
+  }
