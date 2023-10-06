@@ -46,12 +46,17 @@
             <form class="modal_form" action="">
               <div class="modal_form_input_group">
                 <input
-                id="fullname_input"
+                  id="fullname_input"
                   placeholder="Full name"
                   class="modal_input"
                   type="text"
                 />
-                <input id="email_input" placeholder="Email" class="modal_input" type="text" />
+                <input
+                  id="email_input"
+                  placeholder="Email"
+                  class="modal_input"
+                  type="text"
+                />
               </div>
               <button id="join_btn" class="modal_join_btn">Join</button>
             </form>
@@ -107,8 +112,8 @@
       </div>
       <div class="catalog-link-group">
         <h3 class="title">Catalog</h3>
-        <div class="link-group">
-          <div class="catalog-link"><a href="#">Books</a></div>
+        <div id="link_group" class="link-group">
+          <!-- <div class="catalog-link"><a href="#">Books</a></div>
           <div class="catalog-link"><a href="#">Electronic books</a></div>
           <div class="catalog-link"><a href="#">Audiobooks</a></div>
           <div class="catalog-link"><a href="#">Toys, creativity</a></div>
@@ -116,7 +121,7 @@
           <div class="catalog-link"><a href="#">Notepads</a></div>
           <div class="catalog-link"><a href="#">Board games</a></div>
           <div class="catalog-link"><a href="#">Present</a></div>
-          <div class="catalog-link"><a href="#">Stock</a></div>
+          <div class="catalog-link"><a href="#">Stock</a></div> -->
         </div>
       </div>
       <div class="about-str-sec">
@@ -208,6 +213,10 @@
     </footer>
     <script src="./src/assest/js/dom/hamburger-menu.js"></script>
     <script src="./src/assest/js/dom/modal.js"></script>
-    <script type="module" src="./src/assest/js/helper/firebase-helper.js"></script>
+    <script type="module" src="./src/assest/js/catalog/catalog.js"></script>
+    <script
+      type="module"
+      src="./src/assest/js/helper/firebase-helper.js"
+    ></script>
   </body>
 </html>
