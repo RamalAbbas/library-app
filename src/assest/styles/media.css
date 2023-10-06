@@ -258,25 +258,30 @@ height: 101px;
 /* contactpage end */
 
 /* login start */
+.login_header img{
+  margin-left: 15px;
+  margin-top: 17px;
+  width: 200px;
+}
+
 
 .login_form{
   margin-left: 47px;
-  margin-right: 45px;
+  margin-right: 47px;
   padding-left: 18px;
   padding-right: 18px;
-  height:370px ;
-  width: 330px;
+  height:340px ;
+  width: 310px;
 display: flex;
 flex-direction: column;
 align-items: center;
-/* justify-content: center; */
 }
 
 .login_body{
   display: flex;
   justify-content: center;
-  margin-top: 60px;
 }
+.login_container{height: 100vh;}
 
 .login_form h1{
   font-size: 20px;
@@ -284,7 +289,7 @@ align-items: center;
 margin-left: 60px;
 margin-right: 60px;
 margin-bottom: 25px;
-margin-top: -15px;
+margin-top: -40px;
 }
 .login_inputdiv{
   display: grid;
@@ -294,7 +299,7 @@ margin-top: -15px;
   display: flex;
   align-items: center;
   font-size: 16px;
-  padding-left: 23px;
+  padding-left: 11px;
   width: 250px;
   height: 40px;
   
@@ -304,10 +309,18 @@ margin-top: -15px;
 .login_joinbtn{
   width:250px ;
   height: 40px;
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin-top: 35px;
 }
-/* contact page end */
+div.error-div {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 9999;
+  border-radius: 10px;
+width: 200px;
+font-size: 11px;}
+
+/* login page  end */
 
     /*  ---Homepage--- */
   main {
@@ -420,5 +433,6 @@ margin-top: -15px;
 
 >>>>>>> d6adb1eb649495af2bda6084fe6872a5c62e7ef4
 
+  
 
 
