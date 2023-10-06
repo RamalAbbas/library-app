@@ -177,4 +177,4 @@ function categoriesSorter(categories) {
         });
       }
     });
-  }
+}
