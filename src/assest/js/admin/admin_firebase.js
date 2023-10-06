@@ -16,13 +16,12 @@ const db = getDatabase(app);
 
 const books = ref(db,"books")
 const catalog = ref(db,"catalog")
+const about = ref(db,"about")
 
-
-// add book
+// add about info
 add_book_btn?.addEventListener('click',function(e){
     e.preventDefault()
-    let book = 
-        {
+    let about_info = {
             book_id:globalData.id,
             book_name:book_name_input.value,
             book_author:book_author_input.value,
@@ -30,7 +29,22 @@ add_book_btn?.addEventListener('click',function(e){
             book_description:book_description_textarea.value,
             book_is_new:is_New.checked,
             book_type:admin_dropdown_active_item.innerText
-        }
+    }
+    push(about,about_info)
+})
+
+// add book
+add_book_btn?.addEventListener('click',function(e){
+    e.preventDefault()
+    let book = {
+            book_id:globalData.id,
+            book_name:book_name_input.value,
+            book_author:book_author_input.value,
+            book_img_url:book_img_input.value,
+            book_description:book_description_textarea.value,
+            book_is_new:is_New.checked,
+            book_type:admin_dropdown_active_item.innerText
+    }
     let book_type = {
         book_type:admin_dropdown_active_item.innerText
     }
@@ -80,14 +94,12 @@ function renderBook(){
             let id = el.dataset.id
             deleteBookDetail(id)
         }))
-
     });
 }
 renderBook()
 
+// delete
 function deleteBookDetail(id) {
     let rmv = ref(db, "books/" + id);
     remove(rmv);
 }
-
-// delete
