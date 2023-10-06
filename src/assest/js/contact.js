@@ -57,7 +57,7 @@ function showMessage(message, isError) {
   const messageDiv = document.createElement("div");
   if (isError) {
     messageDiv.textContent = "Error: " + message;
-    // messageDiv.classList.add("message", "error");
+    messageDiv.classList.add("message", "error");
     messageDiv.style.backgroundColor = "red";
   } else {
     messageDiv.textContent = message;
