@@ -23,6 +23,7 @@ const about = ref(db,"about")
 // add book
 add_book_btn?.addEventListener('click',function(e){
     e.preventDefault()
+    console.log(globalData);
     let book = {
             book_id:globalData.id,
             book_name:book_name_input.value,
@@ -30,7 +31,8 @@ add_book_btn?.addEventListener('click',function(e){
             book_img_url:book_img_input.value,
             book_description:book_description_textarea.value,
             book_is_new:is_New.checked,
-            book_type:admin_dropdown_active_item.innerText
+            book_type:admin_dropdown_active_item.innerText,
+            book_apperance:globalData.volumeInfo.publishedDate
     }
     push(books,book)
     categoriesSorter(admin_dropdown_active_item.innerText)
