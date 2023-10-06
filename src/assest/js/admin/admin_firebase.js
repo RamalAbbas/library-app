@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getDatabase , ref , push , onValue , remove } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import { getDatabase , ref , push , onValue , remove , update} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA0cVkqdtT7Sp5nmr-RYn1k4CeDeEQmeqM",
@@ -18,20 +18,7 @@ const books = ref(db,"books")
 const catalog = ref(db,"catalog")
 const about = ref(db,"about")
 
-// add about info
-add_book_btn?.addEventListener('click',function(e){
-    e.preventDefault()
-    let about_info = {
-            book_id:globalData.id,
-            book_name:book_name_input.value,
-            book_author:book_author_input.value,
-            book_img_url:book_img_input.value,
-            book_description:book_description_textarea.value,
-            book_is_new:is_New.checked,
-            book_type:admin_dropdown_active_item.innerText
-    }
-    push(about,about_info)
-})
+// book part
 
 // add book
 add_book_btn?.addEventListener('click',function(e){
@@ -45,11 +32,12 @@ add_book_btn?.addEventListener('click',function(e){
             book_is_new:is_New.checked,
             book_type:admin_dropdown_active_item.innerText
     }
-    let book_type = {
-        book_type:admin_dropdown_active_item.innerText
+    let catalog_type = {
+        catalog_id: globalData.id,
+        catalog_type:admin_dropdown_active_item.innerText
     }
     push(books,book)
-    push(catalog,book_type)
+    push(catalog,catalog_type)
 })
 let id = 1;
 // read book
@@ -98,8 +86,75 @@ function renderBook(){
 }
 renderBook()
 
-// delete
+// delete book
 function deleteBookDetail(id) {
     let rmv = ref(db, "books/" + id);
     remove(rmv);
 }
+
+// book type
+
+
+
+
+function renderCatalog(){
+    onValue(catalog,(snapshot) => {
+        const catalogData = snapshot.val();
+        let catalogDataToArr = Object.entries(catalogData)
+        let catalogItem = catalogDataToArr.map((item) => 
+            `
+            <div class="admin_dropdown_item">
+                ${item[1].catalog_type}                
+            </div>
+            `
+        ).join("")
+        
+        admin_dropdown_item_main.innerHTML = catalogItem  
+    })
+}
+renderCatalog()
+// about page
+
+// add about info
+add_info?.addEventListener('click',function(e){
+    e.preventDefault()
+    let about_info = {
+        title: about_title_input.value,
+        book_img_url: about_image_url_input.value,
+        description: about_description_textarea.value,
+    };
+    if(!about_title_input.value || !about_image_url_input.value || !about_description_textarea.value){
+        alert("formu doldurun")
+    }else{
+        update(about, about_info);
+    }
+})
+
+// read about
+function renderAbout(){
+    let about_container = document.querySelector("#about_container")
+    onValue(about, (snapshot) => {
+        const aboutData = snapshot.val();
+       
+        // let aboutDataToArr = Object.entries(aboutData)
+        let aboutItem = [aboutData].map((item) => 
+            `
+                <div class="text_container">
+                    <p class="about_title">
+                        ${item.title}
+                    </p>
+                    <p class="about_description">
+                        ${item.description}
+                    </p>
+                </div>
+                <div class="about_book_img_body">
+                    <img src="${item.book_img_url}" alt="">
+                </div>
+            `
+        ).join("")
+        about_container.innerHTML = aboutItem
+    });
+}
+renderAbout()
+
+

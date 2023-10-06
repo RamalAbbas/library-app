@@ -123,7 +123,24 @@
     height: 43px;
     font-size: 18px;
   }
-
+  .admin_header{
+    display: none;
+  }
+  .admin_mobil_header{
+    display: flex;
+  }
+  .admin_sidebar{
+    display: none;
+  }
+  .table_scroll{
+    overflow-x: scroll;
+    &&::-webkit-scrollbar{
+      background: transparent;
+    }
+  }
+  .admin_main{
+    padding: 11px 13px;
+  }
 }
 
 @media screen and (max-width: 675px) {
