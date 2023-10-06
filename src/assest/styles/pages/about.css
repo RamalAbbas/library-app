@@ -14,6 +14,21 @@
   align-items: center;
 }
 
+.about_book_img_body{
+  max-width: 570px;
+  max-height: 310px;
+  width: 100%;
+  height: 100%;
+}
+
+.about_book_img_body img{
+  max-width: 570px;
+  max-height: 310px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .about_title {
   color: #241400;
   font-size: 36px;
