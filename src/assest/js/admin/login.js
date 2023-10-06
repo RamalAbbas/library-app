@@ -1,41 +1,8 @@
-// const  login_joinbtn=document.querySelector(".login_joinbtn")
-// login_joinbtn.addEventListener("click",function(){
-//     const login_username=document.querySelector(".login_username").value.trim()
-
-//     const login_password=document.querySelector(".login_password").value.trim()
-
-// if(!login_username || !login_password){
-//     showMessage()
-// }
-
-// })
-
-
-// function showMessage(message) {
-//     const messageDiv = document.createElement("div");
-//    const message=" Please write your username and password"  
-//       messageDiv.textContent = "Error:"
-//       messageDiv.style.backgroundColor = "red";
-    
-//       messageDiv.textContent = message;
-   
-//     messageDiv.style.position = "fixed";
-//     messageDiv.style.top = "0";
-//     messageDiv.style.right = "0";
-//     messageDiv.style.padding = "10px";
-//     messageDiv.style.zIndex = "9999";
-//     document.body.appendChild(messageDiv);
-//     setTimeout(function () {
-//       messageDiv.remove();
-//     }, 3000);
-//   }
-
-
 
 const login_joinbtn = document.querySelector(".login_joinbtn");
 login_joinbtn.addEventListener("click", function () {
-  const login_username = document.querySelector(".login_username").value.trim();
-  const login_password = document.querySelector(".login_password").value.trim();
+  const login_username = document.querySelector("#login_username").value.trim();
+  const login_password = document.querySelector("#login_password").value.trim();
 
   if (!login_username || !login_password) {
     showMessage("Please write your username and password");
@@ -45,8 +12,8 @@ login_joinbtn.addEventListener("click", function () {
         username:login_username,
         password:login_password
     }
-    document.querySelector(".login_username").value=""
-    document.querySelector(".login_password").value=""
+    document.querySelector("#login_username").value=""
+    document.querySelector("#login_password").value=""
 
 
 
