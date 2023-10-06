@@ -59,3 +59,24 @@ function render(){
 render()
 
 // join us over
+
+
+//login start//
+
+function writePushData(collection,data) {
+  const colRef = ref(db, collection);
+  push(colRef, data);
+}
+function readData(collection, onData) {
+  const colRef = ref(db, collection);
+  onValue(colRef, (snapshot) => {
+    const data = snapshot.val();
+    onData(data);
+  });
+}
+
+readData("adminLogin", (adminLoginData) => {
+  console.log(adminLoginData);
+
+});
+

@@ -1,15 +1,7 @@
 body{
     background-color: var(--mainColor);
 }
-@font-face {
-    font-family: 'Crimson Text';
-    font-weight: 400;
-    src: url('https://example.com/font/crimson-text-regular.woff2') format('woff2'),
-         url('https://example.com/font/crimson-text-regular.woff') format('woff');
-        }
-:root {
-    --font: 'Crimson Text', serif;
-}
+
 .contact_h1{
     font-size: 36px;
     color: #333;

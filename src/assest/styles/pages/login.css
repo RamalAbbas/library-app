@@ -6,7 +6,7 @@
  }
  
  .login_header{
-    background-color:#720418
+    background-color:var(--sectionColor)
 
  }
  .login_header img{
@@ -14,8 +14,7 @@
     margin-top: 74px;
 }
  .login_container{
-     background-color:#720418;
- 
+     background-color:var(--sectionColor)
  }
  .login_form{
      width: 46%;
@@ -33,6 +32,8 @@
  padding-left: 52px;
  border:1px solid #cecece;
  background-color: #fff;
+ font-family: var(--font);
+
 font-size: 19px;}
  .login_form h1{
  font-family: var(--fontMontserrat);
@@ -54,7 +55,7 @@ font-size: 19px;}
      background-color: #E16A00;
      border:  1px solid #CECECE;
      border-radius: 5px;
- 
+ font-family: var(--font);
  margin-top: 84px;
  margin-bottom: 34px;
  color:#fff;
