@@ -25,7 +25,6 @@ const getData = async (bookId) => {
         const response = await fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`);
         const data = await response.json();
         
-        console.log(data.volumeInfo);
         book_name_input.value = data.volumeInfo.title;
         book_author_input.value = data.volumeInfo.authors[0];
         book_img_input.value = data.volumeInfo.imageLinks?.thumbnail;
@@ -36,7 +35,6 @@ const getData = async (bookId) => {
         console.error(error);
     }
 }
-
 
 
 add_book_type.addEventListener('click', function (e) {
