@@ -25,7 +25,7 @@ function renderCatalog(){
         let catalogItem = catalogDataToArr.map((item) => 
             `
                 <div class="catalog-link">
-                    <a href="${item[1].catalog_id}">${item[1].catalog_type}</a>
+                    <a href="">${item[1].bookType}</a>
                 </div>
             `
         ).join("");
