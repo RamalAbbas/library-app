@@ -67,16 +67,76 @@ function writePushData(collection,data) {
   const colRef = ref(db, collection);
   push(colRef, data);
 }
-function readData(collection, onData) {
-  const colRef = ref(db, collection);
-  onValue(colRef, (snapshot) => {
+
+function readData(collection) {
+  const starCountRef = ref(db, collection);
+  onValue(starCountRef, (snapshot) => {
     const data = snapshot.val();
-    onData(data);
-  });
+    const newData = Object.entries(data).map((item) => ({
+      id: item[0],
+      ...item[1]
+    }));
+    const passwords = newData.map((item) => item.password);
+    const userName=newData.map((item)=>item.userName)
+    console.log(newData);
+
+    console.log("Passwords:", passwords);
+    console.log("userName:",userName);
+  
+    const login_joinbtn = document.querySelector(".login_joinbtn");
+    login_joinbtn.addEventListener("click", function () {
+      const login_username = document.querySelector("#login_username").value.trim();
+      const login_password = document.querySelector("#login_password").value.trim();
+    
+      const userIndex = userName.indexOf(login_username);
+    
+      if (userIndex !== -1 && passwords[userIndex] === login_password) {
+        alert("success");
+    
+        localStorage.setItem("password", login_password);
+        localStorage.setItem("username", login_username);
+      } 
+     
+      else
+       {
+        alert("write correct username and password");
+    
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("loggedInUser");
+      }
+    
+      console.log("login_username", login_username);
+      console.log("login_password", login_password);
+    });
+    
+  })
 }
 
-readData("adminLogin", (adminLoginData) => {
-  console.log(adminLoginData);
+readData("adminLogin");
 
-});
+function showMessage(message) {
+  const errorDiv = document.createElement("div");
+  errorDiv.classList.add("error-div")
+  errorDiv.style.backgroundColor = "#E16A00";
+const errorMessage="please write your password and username"
+  const messageText = document.createElement("span");
+  messageText.textContent = errorMessage;
+  errorDiv.appendChild(messageText);
+
+  errorDiv.style.position = "fixed";
+  errorDiv.style.top = "20px";
+  errorDiv.style.right = "20px";
+  errorDiv.style.padding = "10px";
+  errorDiv.style.zIndex = "9999";
+  errorDiv.style.borderRadius = "10px";
+
+  document.body.appendChild(errorDiv);
+
+  setTimeout(function () {
+   errorDiv.remove();
+  }, 2000);
+}
+
+
+//login end
 

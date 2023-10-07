@@ -320,7 +320,7 @@ margin-top: -40px;
   padding-left: 11px;
   width: 192px;
   height: 40px;
-  font-family: var(--cr);
+  font-family: var(--font);
 
   
 
@@ -447,14 +447,11 @@ font-size: 11px;}
     width: 36px;
     height: 36px;
   }
-<<<<<<< HEAD
+
 }
-=======
-
-  }
 
 
->>>>>>> d6adb1eb649495af2bda6084fe6872a5c62e7ef4
+
 
   
 
