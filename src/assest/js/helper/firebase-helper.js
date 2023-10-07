@@ -91,10 +91,14 @@ function readData(collection) {
       const userIndex = userName.indexOf(login_username);
     
       if (userIndex !== -1 && passwords[userIndex] === login_password) {
-        alert("success");
+        // alert("success");
     
         localStorage.setItem("password", login_password);
         localStorage.setItem("username", login_username);
+
+        var adminSayfaURLsi = "../pages/admin.html";
+
+        window.location.href = adminSayfaURLsi;
       } 
      
       else
