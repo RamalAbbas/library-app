@@ -12,12 +12,10 @@ login_joinbtn.addEventListener("click", function () {
         username:login_username,
         password:login_password
     }
-    // document.querySelector("#login_username").value=""
-    // document.querySelector("#login_password").value=""
 
 
 
-console.log(userLoginObject);
+    // console.log(userLoginObject);
   }
 });
 
