@@ -94,42 +94,17 @@ function readData(collection) {
         document.querySelector("#admin_container").style.display = "flex"
       } 
      
-      else
-       {
-        alert("write correct username and password");
-    
-        localStorage.removeItem("isLoggedIn");
-        localStorage.removeItem("loggedInUser");
+      else if(!login_password || !login_username){
+        showErrorMessage("Fill in all the information",true)
       }
-    
+      else{
+        showErrorMessage("Username or password are incorrect",true)
+      }
     });
   })
 }
 
 readData("adminLogin");
-
-function showMessage(message) {
-  const errorDiv = document.createElement("div");
-  errorDiv.classList.add("error-div")
-  errorDiv.style.backgroundColor = "#E16A00";
-const errorMessage="please write your password and username"
-  const messageText = document.createElement("span");
-  messageText.textContent = errorMessage;
-  errorDiv.appendChild(messageText);
-
-  errorDiv.style.position = "fixed";
-  errorDiv.style.top = "20px";
-  errorDiv.style.right = "20px";
-  errorDiv.style.padding = "10px";
-  errorDiv.style.zIndex = "9999";
-  errorDiv.style.borderRadius = "10px";
-
-  document.body.appendChild(errorDiv);
-
-  setTimeout(function () {
-   errorDiv.remove();
-  }, 2000);
-}
 
 
 let storedUsername = localStorage.getItem("username");
@@ -152,3 +127,21 @@ logout_button.addEventListener('click',function(){
     localStorage.removeItem("password")
     localStorage.removeItem("username")
 })
+function showErrorMessage(message,isError) {
+  const errorDiv = document.createElement("div");
+  errorDiv.classList.add("error-div")
+  errorDiv.style.backgroundColor = "#E16A00";
+  const messageText = document.createElement("span");
+  messageText.textContent = "Error:"+message
+  errorDiv.appendChild(messageText);
+  errorDiv.style.position = "fixed";
+  errorDiv.style.top = "20px";
+  errorDiv.style.right = "20px";
+  errorDiv.style.padding = "10px";
+  errorDiv.style.zIndex = "9999";
+  errorDiv.style.borderRadius = "10px";
+  document.body.appendChild(errorDiv);
+  setTimeout(function () {
+   errorDiv.remove();
+  }, 3000);
+}
