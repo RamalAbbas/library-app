@@ -1,6 +1,6 @@
 .admin{
     width: 100%;
-    display: flex;
+    display: none;
 }
 
 /* admin sidebar start*/
@@ -33,6 +33,7 @@
 }
 
 .sidebar_item_title{
+    cursor: pointer;
     text-decoration: none;
     color: #FFF;
     font-size: 18px;

@@ -78,11 +78,7 @@ function readData(collection) {
     }));
     const passwords = newData.map((item) => item.password);
     const userName=newData.map((item)=>item.userName)
-    console.log(newData);
 
-    console.log("Passwords:", passwords);
-    console.log("userName:",userName);
-  
     const login_joinbtn = document.querySelector(".login_joinbtn");
     login_joinbtn.addEventListener("click", function () {
       const login_username = document.querySelector("#login_username").value.trim();
@@ -91,14 +87,11 @@ function readData(collection) {
       const userIndex = userName.indexOf(login_username);
     
       if (userIndex !== -1 && passwords[userIndex] === login_password) {
-        // alert("success");
-    
         localStorage.setItem("password", login_password);
         localStorage.setItem("username", login_username);
 
-        var adminSayfaURLsi = "../pages/admin.html";
-
-        window.location.href = adminSayfaURLsi;
+        document.querySelector("#login_container").style.display = "none"
+        document.querySelector("#admin_container").style.display = "flex"
       } 
      
       else
@@ -109,10 +102,7 @@ function readData(collection) {
         localStorage.removeItem("loggedInUser");
       }
     
-      console.log("login_username", login_username);
-      console.log("login_password", login_password);
     });
-    
   })
 }
 
@@ -142,5 +132,23 @@ const errorMessage="please write your password and username"
 }
 
 
-//login end
+let storedUsername = localStorage.getItem("username");
+let storedPassword = localStorage.getItem("password");
 
+let checkHasItemInLocalStorage = (user_name, user_pass) => {
+  if (user_name && user_pass) {
+      document.querySelector("#login_container").style.display = "none"
+      document.querySelector("#admin_container").style.display = "flex"
+  } else {
+      document.querySelector("#login_container").style.display = "block"
+      document.querySelector("#admin_container").style.display = "none"
+  }
+}
+
+checkHasItemInLocalStorage(storedUsername, storedPassword);
+
+let logout_button = document.querySelector("#logout_button")
+logout_button.addEventListener('click',function(){
+    localStorage.removeItem("password")
+    localStorage.removeItem("username")
+})

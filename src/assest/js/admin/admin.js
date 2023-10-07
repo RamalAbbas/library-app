@@ -51,6 +51,7 @@ add_type_button.addEventListener('click', function (e) {
     admin_dropdown_active_item.innerText = upperCase(type_input.value);
     admin_book_overlay.classList.remove("show");
 });
+
 admin_dropdown_active_item.addEventListener('click',function(){
     admin_dropdown_item_main.classList.toggle("active")
 })

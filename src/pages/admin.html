@@ -12,7 +12,30 @@
 
 <body>
     <main>
-        <div class="admin">
+        <div id="login_container" class="login_container">
+            <div class="login_header">
+              <img src="../assest/icons/admin/logo/sidebar_logo.svg" alt="sidebar_logo">
+      
+            </div>
+            <div class="login_body">
+              <div class="login_form">
+                <h1>Welcome Admin</h1>
+                <div class="login_inputdiv">
+                  <input id="login_username" type="text" placeholder="Username"
+                  name="Username" />
+                  <input
+                    id="login_password"
+                    type="password"
+                    placeholder="Password"
+                    name="Password"
+                  />
+                </div>
+                <button type="button" class="login_joinbtn">Join</button>
+              </div>
+            </div>
+        </div>
+
+        <div id="admin_container" class="admin">
             <div class="admin_sidebar">
                 <div class="sidebar_logo">
                     <img src="../assest/icons/admin/logo/sidebar_logo.svg" alt="sidebar_logo">
@@ -43,7 +66,7 @@
                     </div>
                     <div class="sidebar_item">
                         <img width="30" src="../assest/icons/admin/logo/sidebar_minilogo.svg" alt="sidebar_minilogo">
-                        <p class="sidebar_item_title">Logout</p>
+                        <p class="sidebar_item_title" id="logout_button">Logout</p>
                     </div>
 
                 </div>
@@ -305,6 +328,7 @@
     <script src="../assest/js/custom_functions/function.js"></script>
     <script src="../assest/js/admin/admin.js"></script>
     <script type="module" src="../assest/js/contact.js"></script>
+    <script type="module" src="../assest/js/admin/login.js"></script>
     <script src="../assest/js/dropdown/dropdown.js"></script>
     <script type="module" src="../assest/js/admin/admin_firebase.js"></script>
     <script type="module" src="../assest/js/helper/firebase-helper.js"></script>
