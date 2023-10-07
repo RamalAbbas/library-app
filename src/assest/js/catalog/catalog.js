@@ -18,6 +18,7 @@ const catalog = ref(db,"catalog")
 const books = ref(db,"books")
 
 let globalBookArr;
+
 function renderCatalogTypes(){
     let category_type_body= document.querySelector("#category_type_body")
     onValue(catalog, (snapshot) => {
@@ -70,13 +71,16 @@ function renderBooks(){
             `
         ).join("");
         card_body_all.innerHTML = bookItem;  
+        console.log(globalBookArr);
+        if(globalBookArr.length <= 5){
+            document.querySelector(".admin_slider_class").classList.add("no_active")
+        }
     });
 }
 renderBooks()
 
 let filterBookType = (arr,item) => {
     let resultBook = arr.filter((items) => items[1].book_type == item)
-    console.log(resultBook);
     let bookItem = resultBook.map((item) => 
         `
             <div class="swiper-slide">
@@ -94,7 +98,7 @@ let filterBookType = (arr,item) => {
                     <div class="book-in-text1">${item[1].book_name}</div>
                     <div class="book-in-text2">${item[1].book_author}</div>
                         <a href="../pages/book.html">
-                            <div class="book-read-more">Read more</div>
+                            <div data-id="${item[1].book_id}" class="book-read-more">Read more</div>
                         </a>
                     </div>
                 </div>
@@ -102,4 +106,7 @@ let filterBookType = (arr,item) => {
         `
     ).join("");
     card_body_all.innerHTML = bookItem;  
+    if(resultBook.length <= 5){
+        document.querySelector(".admin_slider_class").classList.add("no_active")
+    }
 }

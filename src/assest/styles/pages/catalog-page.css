@@ -84,8 +84,6 @@ main {
   width: 135px ;
   margin-top: 30px;
   margin-bottom: 10px;
-  display: flex;
-  align-items: center;
   text-align: center;
   height: 100%;
   color: var(--fontColor);
@@ -214,4 +212,23 @@ main {
 .swiper-slide{
   display: flex !important;
   justify-content: center !important;
+}
+
+.admin_slider_class.no_active .swiper{
+  width: 100% !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  justify-content: space-between !important;
+}
+
+.admin_slider_class.no_active .swiper-wrapper{
+  transform: none !important;
+}
+
+.admin_slider_class.no_active .swiper-button-prev{
+  display: none !important;
+}
+
+.admin_slider_class.no_active .swiper-button-next{
+  display: none !important;
 }
