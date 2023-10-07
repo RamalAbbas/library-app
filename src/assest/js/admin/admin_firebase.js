@@ -19,7 +19,8 @@ const catalog = ref(db,"catalog")
 const about = ref(db,"about")
 
 // book part
-
+let date = new Date
+let create_book_date = `${date.getFullYear()}:${date.getMonth()}:${date.getDay()}`
 // add book
 add_book_btn?.addEventListener('click',function(e){
     e.preventDefault()
@@ -32,7 +33,8 @@ add_book_btn?.addEventListener('click',function(e){
             book_description:book_description_textarea.value,
             book_is_new:is_New.checked,
             book_type:admin_dropdown_active_item.innerText,
-            book_apperance:globalData.volumeInfo.publishedDate
+            book_apperance:globalData.volumeInfo.publishedDate,
+            book_date:create_book_date,
     }
     push(books,book)
     categoriesSorter(admin_dropdown_active_item.innerText)

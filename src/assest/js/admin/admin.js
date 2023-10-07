@@ -42,9 +42,13 @@ add_book_type.addEventListener('click', function (e) {
     admin_book_overlay.classList.add("show");
 });
 
+function upperCase(str) {
+    return str[0].toUpperCase() + str.slice(1);
+  }
+
 add_type_button.addEventListener('click', function (e) {
     e.preventDefault();
-    admin_dropdown_active_item.innerText = type_input.value;
+    admin_dropdown_active_item.innerText = upperCase(type_input.value);
     admin_book_overlay.classList.remove("show");
 });
 admin_dropdown_active_item.addEventListener('click',function(){
