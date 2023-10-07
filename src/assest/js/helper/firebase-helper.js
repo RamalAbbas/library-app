@@ -63,10 +63,7 @@ render()
 
 //login start//
 
-function writePushData(collection,data) {
-  const colRef = ref(db, collection);
-  push(colRef, data);
-}
+
 
 function readData(collection) {
   const starCountRef = ref(db, collection);
@@ -91,23 +88,32 @@ function readData(collection) {
       const userIndex = userName.indexOf(login_username);
     
       if (userIndex !== -1 && passwords[userIndex] === login_password) {
-        // alert("success");
     
-        localStorage.setItem("password", login_password);
-        localStorage.setItem("username", login_username);
+        
+        const adminData = {
+          username: login_username,
+          password: login_password,
+        };
+        
+        const adminDataJSON = JSON.stringify(adminData);
+        
+        localStorage.setItem("userData", adminDataJSON);
 
-        var adminSayfaURLsi = "../pages/admin.html";
+        var adminPageURL = "../pages/admin.html";
 
-        window.location.href = adminSayfaURLsi;
+        window.location.href = adminPageURL;
       } 
      
-      else
-       {
-        alert("write correct username and password");
-    
-        localStorage.removeItem("isLoggedIn");
-        localStorage.removeItem("loggedInUser");
+      else{if(!login_password || !login_username){
+        showErrorMessage("Fill in all the information",true)
+      
       }
+      else{
+        showErrorMessage("Username or password are incorrect",true)
+      }
+      }
+      document.querySelector("#login_username").value=""
+      document.querySelector("#login_password").value=""
     
       console.log("login_username", login_username);
       console.log("login_password", login_password);
@@ -118,28 +124,7 @@ function readData(collection) {
 
 readData("adminLogin");
 
-function showMessage(message) {
-  const errorDiv = document.createElement("div");
-  errorDiv.classList.add("error-div")
-  errorDiv.style.backgroundColor = "#E16A00";
-const errorMessage="please write your password and username"
-  const messageText = document.createElement("span");
-  messageText.textContent = errorMessage;
-  errorDiv.appendChild(messageText);
 
-  errorDiv.style.position = "fixed";
-  errorDiv.style.top = "20px";
-  errorDiv.style.right = "20px";
-  errorDiv.style.padding = "10px";
-  errorDiv.style.zIndex = "9999";
-  errorDiv.style.borderRadius = "10px";
-
-  document.body.appendChild(errorDiv);
-
-  setTimeout(function () {
-   errorDiv.remove();
-  }, 2000);
-}
 
 
 //login end

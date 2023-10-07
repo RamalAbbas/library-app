@@ -14,17 +14,18 @@
     margin-top: 74px;
 }
  .login_container{
-     background-color:var(--sectionColor)
+     background-color:var(--sectionColor);
+height: 150vh;
  }
  .login_form{
      width: 46%;
-     height: 544px;
+     height: 38%;
      margin-left: 30%;
      padding-left: 54px;
      padding-right: 54px;
  padding-top: 75px;
      margin-top: 100px;
-     background-color:#fff;
+     background-color:#fff
  }
  
  .login_inputdiv input{
