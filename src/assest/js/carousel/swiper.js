@@ -6,7 +6,7 @@ const swiper = new Swiper(".swiper", {
     direction: "horizontal",
     loop: true,
     speed: 800,
-    slidesPerView: 5,
+    slidesPerView: 2,
     slidesPerGroup: 1,
     navigation: {
       nextEl: ".swiper-button-next",

@@ -17,6 +17,7 @@ const db = getDatabase(app);
 const catalog = ref(db,"catalog")
 const books = ref(db,"books")
 
+let globalBookArr;
 function renderCatalogTypes(){
     let category_type_body= document.querySelector("#category_type_body")
     onValue(catalog, (snapshot) => {
@@ -24,11 +25,16 @@ function renderCatalogTypes(){
         let catalogDataToArr = Object.entries(catalogData);
         let catalogItem = catalogDataToArr.map((item) => 
             `
-                <li>${item[1].bookType}</li>
+                <li id="catalog_book_type">${item[1].bookType}</li>
             `
         ).join("");
         
         category_type_body.innerHTML = catalogItem;  
+
+        let catalog_book_type = document.querySelectorAll("#catalog_book_type")
+        catalog_book_type.forEach((item) => item.addEventListener('click',function(){
+            filterBookType(globalBookArr,item.innerText);
+        }))
     });
 }
 renderCatalogTypes();
@@ -38,6 +44,7 @@ function renderBooks(){
     onValue(books, (snapshot) => {
         const bookData = snapshot.val();
         let bookDataToArr = Object.entries(bookData);
+        globalBookArr = bookDataToArr
         let bookItem = bookDataToArr.map((item) => 
             `
                 <div class="swiper-slide">
@@ -62,8 +69,37 @@ function renderBooks(){
                 </div>
             `
         ).join("");
-        
         card_body_all.innerHTML = bookItem;  
     });
 }
 renderBooks()
+
+let filterBookType = (arr,item) => {
+    let resultBook = arr.filter((items) => items[1].book_type == item)
+    console.log(resultBook);
+    let bookItem = resultBook.map((item) => 
+        `
+            <div class="swiper-slide">
+                <div class="book-box">
+                    ${item[1].book_is_new ? `<div class="new_button">New</div>` : ``}
+                    <div>
+                        <img
+                            height="179px"
+                            width="135px"
+                            src="${item[1].book_img_url}"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class="book-in-text1">${item[1].book_name}</div>
+                    <div class="book-in-text2">${item[1].book_author}</div>
+                        <a href="../pages/book.html">
+                            <div class="book-read-more">Read more</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `
+    ).join("");
+    card_body_all.innerHTML = bookItem;  
+}
