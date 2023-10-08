@@ -20,7 +20,7 @@ const books = ref(db,"books")
 let globalBookArr;
 
 function renderCatalogTypes(){
-    let category_type_body= document.querySelector("#category_type_body")
+    let category_type_body = document.querySelector("#category_type_body")
     onValue(catalog, (snapshot) => {
         const catalogData = snapshot.val();
         let catalogDataToArr = Object.entries(catalogData);
@@ -40,15 +40,15 @@ function renderCatalogTypes(){
 }
 renderCatalogTypes();
 
+let card_body_all= document.querySelector("#card_body_all")
+
 function renderBooks(){
-    let card_body_all= document.querySelector("#card_body_all")
     onValue(books, (snapshot) => {
         const bookData = snapshot.val();
         let bookDataToArr = Object.entries(bookData);
         globalBookArr = bookDataToArr
         let bookItem = bookDataToArr.map((item) => 
             `
-                <div class="swiper-slide">
                     <div class="book-box">
                         ${item[1].book_is_new ? `<div class="new_button">New</div>` : ``}
                         <div>
@@ -62,19 +62,19 @@ function renderBooks(){
 
                         <div class="book-in-text1">${item[1].book_name}</div>
                         <div class="book-in-text2">${item[1].book_author}</div>
-                            <a href="../pages/book.html">
-                                <div class="book-read-more">Read more</div>
-                            </a>
+                            <div id="read_more_button" data-id="${item[0]}" class="book-read-more">Read more</div>
                         </div>
                     </div>
-                </div>
             `
         ).join("");
-        card_body_all.innerHTML = bookItem;  
-        console.log(globalBookArr);
-        if(globalBookArr.length <= 5){
-            document.querySelector(".admin_slider_class").classList.add("no_active")
-        }
+        card_body_all.innerHTML = bookItem; 
+        
+        let read_more_button = document.querySelectorAll("#read_more_button")
+        read_more_button.forEach((item) => item.addEventListener('click',function(e){
+            e.preventDefault()
+            let book_id = item.dataset.id
+            window.location.href = `../pages/book.html#id=${book_id}`
+        }))
     });
 }
 renderBooks()
@@ -83,7 +83,6 @@ let filterBookType = (arr,item) => {
     let resultBook = arr.filter((items) => items[1].book_type == item )
     let bookItem = resultBook.map((item) => 
         `
-            <div class="swiper-slide">
                 <div class="book-box">
                     ${item[1].book_is_new ? `<div class="new_button">New</div>` : ``}
                     <div>
@@ -97,18 +96,51 @@ let filterBookType = (arr,item) => {
 
                     <div class="book-in-text1">${item[1].book_name}</div>
                     <div class="book-in-text2">${item[1].book_author}</div>
-                        <a href="../pages/book.html">
-                            <div data-id="${item[1].book_id}" class="book-read-more">Read more</div>
+                        <a data-id="${item[1].book_id}" href="../pages/book.html">
+                            <div  class="book-read-more">Read more</div>
                         </a>
                     </div>
                 </div>
-            </div>
         `
     ).join("");
     card_body_all.innerHTML = bookItem;  
-    if(resultBook.length <= 5){
-        document.querySelector(".admin_slider_class").classList.add("no_active")
-    }else{
-        document.querySelector(".admin_slider_class").classList.remove("no_active")
-    }
 }
+
+// let card_body_new = document.querySelector("#card_body_new")
+// function renderNewBooks(){
+//     onValue(books, (snapshot) => {
+//         const bookData = snapshot.val();
+//         let bookDataToArr = Object.entries(bookData);
+//         globalBookArr = bookDataToArr
+//         let bookItem = bookDataToArr.map((item) => {
+//             if(item[1].book_is_new){
+//               return  `
+//                 <div class="swiper-slide">
+//                     <div class="book-box">
+//                         <div class="new_button">New</div>
+//                         <div>
+//                             <img
+//                                 height="179px"
+//                                 width="135px"
+//                                 src="${item[1].book_img_url}"
+//                                 alt=""
+//                             />
+//                         </div>
+
+//                         <div class="book-in-text1">${item[1].book_name}</div>
+//                         <div class="book-in-text2">${item[1].book_author}</div>
+//                             <a href="../pages/book.html">
+//                                 <div class="book-read-more">Read more</div>
+//                             </a>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 `
+//             }
+        
+//         }).join("");
+//         card_body_new.innerHTML = bookItem;  
+//         console.log(globalBookArr);
+//     });
+// }
+// renderNewBooks()

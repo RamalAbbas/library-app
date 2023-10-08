@@ -175,7 +175,7 @@ function categoriesSorter(categories) {
       catagorieArr.forEach((item) => {
         arr.push(item[1].bookType);
       });
-      if (!arr.includes(categories)) {
+      if(!arr.includes(categories)) {
         push(catalog, {
           bookType: admin_dropdown_active_item.innerText,
         });

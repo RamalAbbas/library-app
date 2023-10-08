@@ -21,7 +21,6 @@ function renderCatalog(){
     onValue(catalog, (snapshot) => {
         const catalogData = snapshot.val();
         let catalogDataToArr = Object.entries(catalogData);
-        console.log(catalogDataToArr);
         let catalogItem = catalogDataToArr.map((item) => 
             `
                 <div class="catalog-link">
