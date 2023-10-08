@@ -222,8 +222,16 @@ main {
 }
 
 .admin_slider_class.no_active .swiper-wrapper{
+  width: 99% !important;
+  display: flex !important;
+  justify-content: space-between !important;
   transform: none !important;
 }
+.admin_slider_class.no_active .swiper-slide{
+  width: fit-content !important;
+}
+
+
 
 .admin_slider_class.no_active .swiper-button-prev{
   display: none !important;

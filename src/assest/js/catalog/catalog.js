@@ -80,7 +80,7 @@ function renderBooks(){
 renderBooks()
 
 let filterBookType = (arr,item) => {
-    let resultBook = arr.filter((items) => items[1].book_type == item)
+    let resultBook = arr.filter((items) => items[1].book_type == item )
     let bookItem = resultBook.map((item) => 
         `
             <div class="swiper-slide">
@@ -108,5 +108,7 @@ let filterBookType = (arr,item) => {
     card_body_all.innerHTML = bookItem;  
     if(resultBook.length <= 5){
         document.querySelector(".admin_slider_class").classList.add("no_active")
+    }else{
+        document.querySelector(".admin_slider_class").classList.remove("no_active")
     }
 }
