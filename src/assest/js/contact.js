@@ -94,8 +94,11 @@ onValue(contact, (snapshot) => {
     contact_tbody ? contact_tbody.innerHTML = contactItem  : null 
 });
 
+contactTextarea.addEventListener("input", function () {
+  letterCounter();
+});
+
 function letterCounter() {
-          var contactTextarea = document.querySelector("#contactTextarea");
           var enteredText = contactTextarea.value;
           var letterCount =enteredText.length;
   if (letterCount > 100) {

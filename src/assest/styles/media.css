@@ -40,6 +40,10 @@
   .delivery-text {
     padding: 0;
   }
+
+  .login_form{
+    height: 21%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -140,6 +144,10 @@
   }
   .admin_main{
     padding: 11px 13px;
+  }
+
+  .login_form{
+    height: 21%;
   }
 }
 
