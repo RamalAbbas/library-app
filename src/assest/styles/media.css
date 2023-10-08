@@ -44,6 +44,40 @@
   .login_form{
     height: 21%;
   }
+  /* ---Search Page--- */
+  .src-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .src_title {
+    margin-top: 43px;
+    text-align: center;
+  }
+  .search_container {
+    flex-direction: column;
+    margin-top: 28px;
+    align-items: center;
+    }
+  .search {
+    width: 100%;
+    gap: 25px;
+    align-items: center;
+  }
+  .order_input, .src_btn {
+    max-width: 243px;
+    height: 38px;
+    font-size: 16px;
+  }
+  .order_input {
+    padding-left: 15px;
+  }
+  .slider {
+    display: flex;
+    flex-direction: column;
+  }
+  .src_books {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -456,6 +490,48 @@ font-size: 11px;}
     height: 36px;
   }
 
+  /* ---Search Page--- */
+  .src_books {
+    background-color: var(--mainColor);
+    width: 100%;
+    padding: 20px 10px 0 10px;
+    flex-direction: column;
+    height: auto;
+    box-shadow: none;
+    margin-left: 0;
+    margin-top: 0;
+    align-items: center;
+  }
+  .writing {
+    align-items: center;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  .src_book_name {
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .writer_name {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .writing p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .order_slider_arrow_left, .order_slider_arrow_right {
+    position: static;
+  }
+  .silder_vectors {
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 45px 0 45px;
+
+  }
+  .src_vector {
+    width: 9px;
+    height: 23px;
+  }
 }
 
 

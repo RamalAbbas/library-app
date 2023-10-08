@@ -1,226 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Page</title>
     <link rel="stylesheet" href="../assest/styles/main.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="container" id="header">
-        <nav class="header_navbar">
-            <div class="header_navbar_brand">
-                <img class="header_navbar_logo" src="../assest/icons/logo/logo.svg" alt="">
-            </div>
+      <nav class="header_navbar">
+        <div class="header_navbar_brand">
+          <img
+            class="header_navbar_logo"
+            src="../assest/icons/logo/logo.svg"
+            alt=""
+          />
+        </div>
 
-            <ul class="header_nav">
-                <li class="header_nav_item">
-                    <a href="../../index.html">
-                        Home
-                    </a>
-                </li>
-                <li class="header_nav_item">
-                    <a href="./catalog-page.html">
-                        Catalog
-                    </a>
-                </li>
-                <li class="header_nav_item">
-                    <a href="./about.html">
-                        About Store
-                    </a>
-                </li>
-                <li class="header_nav_item">
-                    <a href="./contact.html">
-                        Contact Us
-                    </a>
-                </li>
-                <li class="header_nav_item active">
-                    <a href="./search-page.html">
-                        Search
-                    </a>
-                </li>
-            </ul>
+        <ul class="header_nav">
+          <li class="header_nav_item">
+            <a href="../../index.html"> Home </a>
+          </li>
+          <li class="header_nav_item">
+            <a href="./catalog-page.html"> Catalog </a>
+          </li>
+          <li class="header_nav_item">
+            <a href="./about.html"> About Store </a>
+          </li>
+          <li class="header_nav_item">
+            <a href="./contact.html"> Contact Us </a>
+          </li>
+          <li class="header_nav_item active">
+            <a href="./search-page.html"> Search </a>
+          </li>
+        </ul>
 
-            <div class="header_authentication">
-                <button id="join-btn" class="header_join-btn">
-                    <img src="../assest/icons/authentication/user.svg" alt="">
-                    Join us
-                </button>
-            </div>
-            <div class="header_mobile_body">
-                <div id="header_menu" class="header_menu">
-                    <img src="../assest/icons/menu/menu.svg" alt="">
-                </div>
-                <div id="overlay" class="overlay">
-                    <img id="close_icon" class="close_icon" src="../assest/icons/menu/close.svg" alt="">
+        <div class="header_authentication">
+          <button id="join-btn" class="header_join-btn">
+            <img src="../assest/icons/authentication/user.svg" alt="" />
+            Join us
+          </button>
+        </div>
+        <div class="header_mobile_body">
+          <div id="header_menu" class="header_menu">
+            <img src="../assest/icons/menu/menu.svg" alt="" />
+          </div>
+          <div id="overlay" class="overlay">
+            <img
+              id="close_icon"
+              class="close_icon"
+              src="../assest/icons/menu/close.svg"
+              alt=""
+            />
 
-                    <div class="menu_list">
-                        <ul class="menu_nav">
-                            <li class="menu_item">
-                                <a href="">
-                                    Акции
-                                </a>
-                            </li>
-                            <li class="menu_item">
-                                <a href="">
-                                    О магазине
-                                </a>
-                            </li>
-                            <li class="menu_item">
-                                <a href="">
-                                    Каталлог
-                                </a>
-                            </li>
-                            <li class="menu_item">
-                                <a href="">
-                                    Доставка
-                                </a>
-                            </li>
-                            <li class="menu_item">
-                                <a href="">
-                                    Блог
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="menu_list">
+              <ul class="menu_nav">
+                <li class="menu_item">
+                  <a href=""> Акции </a>
+                </li>
+                <li class="menu_item">
+                  <a href=""> О магазине </a>
+                </li>
+                <li class="menu_item">
+                  <a href=""> Каталлог </a>
+                </li>
+                <li class="menu_item">
+                  <a href=""> Доставка </a>
+                </li>
+                <li class="menu_item">
+                  <a href=""> Блог </a>
+                </li>
+              </ul>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        <div class="search_container">
-            <section class="search">
-                <h1>Search</h1>
-                <input class="order_input" placeholder="Order in Chaos" type="text">
-                <button>Search</button>
-            </section>
-            <section class="slider">
-                <div class="order_slider_arrow_left">
-                    <svg width="17" height="48" viewBox="0 0 17 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.7925 1L1 24L15.7925 47" stroke="#720418" />
-                    </svg>
-                </div>
-
+    <main class="src-container">
+      <div class="src_title">
+        <h1>Search</h1>
+      </div>
+      <div class="search_container">
+        <section class="search">
+          <input class="order_input" placeholder="Order in Chaos" type="text" />
+          <button class="src_btn">Search</button>
+        </section>
+        <section class="slider">
+          <div class="silder_vectors">
+            <div class="order_slider_arrow_left">
+              <img
+                class="src_vector"
+                src="../assest/images/search-page/vector2.svg"
+                alt="vector"
+              />
+            </div>
+            <div class="order_slider_arrow_right">
+              <img
+                class="src_vector"
+                src="../assest/images/search-page/vector3.svg"
+                alt="vector"
+              />
+            </div>
+          </div>
+          <div class="src_books_container">
+            <div class="src_books">
+              <div>
                 <img src="../assest/images/search-page/book.svg" alt="book" />
-
-                <div class="writing">
-                    <h2>Konstantin Koptelov</h2>
-                    <p>
-                        We work without holidays and weekends! Residents of Kiev can <br> receive an order on the day of
-                        its registration. Customers from <br> other cities of Ukraine can receive an order within 1-5
-                        days, <br> depending on the location of the settlement and the selected <br> delivery method.
-                        Orders over UAH 1000 are delivered free of <br> charge *. You can see the available methods,
-                        exact terms and <br> cost of delivery during checkout in the order basket, after <br> <br>
-                        selecting the delivery city
-                    </p>
-                </div>
-
-                <div class="order_slider_arrow_right">
-                    <svg width="17" height="48" viewBox="0 0 17 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.20755 1L16 24L1.20755 47" stroke="#720418" />
-                    </svg>
-                </div>
-            </section>
-        </div>
+              </div>
+              <div class="writing">
+                <h2 class="src_book_name">Order in Chaos</h2>
+                <h3 class="writer_name">Konstantin Koptelov</h3>
+                <p>
+                  We work without holidays and weekends! Residents of Kiev can
+                  receive an order on the day of its registration. Customers
+                  from other cities of Ukraine can receive an order within 1-5
+                  days, depending on the location of the settlement and the
+                  selected delivery method. Orders over UAH 1000 are delivered
+                  free of charge *. You can see the available methods, exact
+                  terms and cost of delivery during checkout in the order
+                  basket, after selecting the delivery city
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <div class="social_media_component">
-        <p class="social_media_title">
-            Follow us on social media
-        </p>
-        <div class="social_media_icon_body">
-            <a href="https://www.facebook.com/">
-                <img src="../assest/icons/social-media/facebook.svg" alt="">
-            </a>
-            <a href="https://twitter.com/">
-                <img src="../assest/icons/social-media/twitter.svg" alt="">
-            </a>
-            <a href="https://www.instagram.com/">
-                <img src="../assest/icons/social-media/instagram.svg" alt="">
-            </a>
-        </div>
+      <p class="social_media_title">Follow us on social media</p>
+      <div class="social_media_icon_body">
+        <a href="https://www.facebook.com/">
+          <img src="../assest/icons/social-media/facebook.svg" alt="" />
+        </a>
+        <a href="https://twitter.com/">
+          <img src="../assest/icons/social-media/twitter.svg" alt="" />
+        </a>
+        <a href="https://www.instagram.com/">
+          <img src="../assest/icons/social-media/instagram.svg" alt="" />
+        </a>
+      </div>
     </div>
 
-
     <footer id="footer">
-        <div class="footer-top">
-            <div class="footer-logo">
-                <img src="../assest/icons/footer/logo/logo.svg" alt="">
-            </div>
-
-            <div class="footer_nav">
-                <ul class="footer_list">
-                    <p class="footer_list_head_item">
-                        Popular
-                    </p>
-                    <li class="footer_nav_item">
-                        <a href="">
-                            Programming
-                        </a>
-                        <a href="">
-                            Books For Children
-                        </a>
-                        <a href="">
-                            Psychology
-                        </a>
-                        <a href="">
-                            Business
-                        </a>
-                    </li>
-                </ul>
-
-                <ul class="footer_list">
-                    <p class="footer_list_head_item">
-                        Popular
-                    </p>
-                    <li class="footer_nav_item">
-                        <a href="">
-                            Programming
-                        </a>
-                        <a href="">
-                            Books For Children
-                        </a>
-                        <a href="">
-                            Psychology
-                        </a>
-                        <a href="">
-                            Business
-                        </a>
-                    </li>
-                </ul>
-
-                <ul class="footer_list">
-                    <p class="footer_list_head_item">
-                        Popular
-                    </p>
-                    <li class="footer_nav_item">
-                        <a href="">
-                            Programming
-                        </a>
-                        <a href="">
-                            Books For Children
-                        </a>
-                        <a href="">
-                            Psychology
-                        </a>
-                        <a href="">
-                            Business
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="../assest/icons/footer/logo/logo.svg" alt="" />
         </div>
-        <p class="footer-title">
-            All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
-        </p>
-    </footer>
 
+        <div class="footer_nav">
+          <ul class="footer_list">
+            <p class="footer_list_head_item">Popular</p>
+            <li class="footer_nav_item">
+              <a href=""> Programming </a>
+              <a href=""> Books For Children </a>
+              <a href=""> Psychology </a>
+              <a href=""> Business </a>
+            </li>
+          </ul>
+
+          <ul class="footer_list">
+            <p class="footer_list_head_item">Popular</p>
+            <li class="footer_nav_item">
+              <a href=""> Programming </a>
+              <a href=""> Books For Children </a>
+              <a href=""> Psychology </a>
+              <a href=""> Business </a>
+            </li>
+          </ul>
+
+          <ul class="footer_list">
+            <p class="footer_list_head_item">Popular</p>
+            <li class="footer_nav_item">
+              <a href=""> Programming </a>
+              <a href=""> Books For Children </a>
+              <a href=""> Psychology </a>
+              <a href=""> Business </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-title">
+        All rights reserved © 2003-2021 LIBRARY TERMS OF USE | Privacy Policy
+      </p>
+    </footer>
 
     <script src="../assest/js/dom/hamburger-menu.js"></script>
     <script src="../assest/js/dom/modal.js"></script>
-</body>
-
+  </body>
 </html>
