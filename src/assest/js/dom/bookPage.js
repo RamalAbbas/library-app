@@ -1,20 +1,24 @@
-// let comment_input = document.querySelector(".comment_input");
-// let send_button = document.querySelector(".send_button");
-// let comment_description = document.querySelector(".comment_description");
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+import { getDatabase , ref , onValue } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
-// send_button.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   let inputValue = comment_input.value;
+const firebaseConfig = {
+  apiKey: "AIzaSyA0cVkqdtT7Sp5nmr-RYn1k4CeDeEQmeqM",
+  authDomain: "our-project-6d4a4.firebaseapp.com",
+  projectId: "our-project-6d4a4",
+  storageBucket: "our-project-6d4a4.appspot.com",
+  messagingSenderId: "805479077338",
+  appId: "1:805479077338:web:6c77c3377543c2e6ee9ce3"
+};
 
-//   comment_description.innerHTML = inputValue;
-//   comment_input.value = "";
-// });
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const books = ref(db,"books")
 
 let comment_input = document.querySelector(".comment_input");
 let send_button = document.querySelector(".send_button");
-let comment_description = document.querySelector(".comment_description");
 let comment_main = document.querySelector(".comment_main");
-console.log(comment_main);
 send_button.addEventListener("click", function (e) {
   e.preventDefault();
   let listItem = `
@@ -28,27 +32,57 @@ send_button.addEventListener("click", function (e) {
             </div>
         </div>
       `;
-  console.log(listItem);
 
-  // comment_main.appendChild(listItem);
   comment_main.innerHTML += listItem;
   comment_input.value = "";
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     let comment_input = document.querySelector(".comment_input");
-//     let send_button = document.querySelector(".send_button");
-//     let comment_list = document.querySelector(".comment_list"); // "comment_list" adındaki sırasız liste öğesini seçiyoruz
+let book_url = window.location.hash
+let book_length = book_url.length
+let book_id = book_url.slice(4,book_length)
+let book_page = document.querySelector("#book_page")
+let renderBookPageDetails = () => {
+    onValue(books, (snapshot) => {
+        const bookData = snapshot.val();
+        let bookDataToArr = Object.entries(bookData);
+        let bookPageArr = bookDataToArr.filter((item) => item[0] == book_id)
+        let bookPage = bookPageArr.map((item) => `
+            <div class="book_top">
+                <div class="book_text">
+                    <a class="back_navigation" href="./catalog-page.html">
+                        <button class="back_btn">
+                            &lt; BACK </button>
+                    </a>
+                    <a href="">
+                        <button class="btn_primary">
+                            ${item[1].book_apperance.slice(0,4)}
+                        </button>
+                    </a>
+                    <p class="book_name">${item[1].book_name}</p>
+                    <p class="book_apperance">2 days ago added</p>
+                    <p class="book_writer">${item[1].book_author}</p>
+                    <p class="book_description">
+                        ${item[1].book_description}
+                    </p>
 
-//     send_button.addEventListener("click", function (e) {
-//       e.preventDefault();
-//       let inputValue = comment_input.value;
+                    <form class="comment_form" action="">
+                        <input class="comment_input" type="text" placeholder="your anonim comment...">
+                        <button class="send_button">
+                            <img src="../assest/icons/bookpage/send.svg" alt=""></button>
+                    </form>
 
-//       if (inputValue.trim() !== "") {
-//         let listItem = document.createElement("li");
-//         listItem.textContent = inputValue;
-//         comment_list.appendChild(listItem); // Yorumu "comment_list" içine ekliyoruz
-//         comment_input.value = "";
-//       }
-//     });
-//   });
+                    <div class="comment_main">
+                        
+
+                    </div>
+                </div>
+                <div class="book_img">
+                ${item[1].book_is_new ? `<div class="new_information_box">New</div>` : ``} 
+                    <img src="${item[1].book_img_url}" alt="">
+                </div>
+            </div>
+        `)
+        book_page.innerHTML = bookPage
+    });
+}
+renderBookPageDetails()
