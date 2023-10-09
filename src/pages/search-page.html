@@ -1,15 +1,20 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Page</title>
-    <link rel="stylesheet" href="../assest/styles/main.css">
+    <link rel="stylesheet" href="../assest/styles/main.css" />
   </head>
 
   <body>
     <header class="container" id="header">
       <nav class="header_navbar">
         <div class="header_navbar_brand">
-          <img class="header_navbar_logo" src="../assest/icons/logo/logo.svg" alt="">
+          <img
+            class="header_navbar_logo"
+            src="../assest/icons/logo/logo.svg"
+            alt=""
+          />
         </div>
 
         <ul class="header_nav">
@@ -32,16 +37,21 @@
 
         <div class="header_authentication">
           <button id="join-btn" class="header_join-btn">
-            <img src="../assest/icons/authentication/user.svg" alt="">
+            <img src="../assest/icons/authentication/user.svg" alt="" />
             Join us
           </button>
         </div>
         <div class="header_mobile_body">
           <div id="header_menu" class="header_menu">
-            <img src="../assest/icons/menu/menu.svg" alt="">
+            <img src="../assest/icons/menu/menu.svg" alt="" />
           </div>
           <div id="overlay" class="overlay">
-            <img id="close_icon" class="close_icon" src="../assest/icons/menu/close.svg" alt="">
+            <img
+              id="close_icon"
+              class="close_icon"
+              src="../assest/icons/menu/close.svg"
+              alt=""
+            />
 
             <div class="menu_list">
               <ul class="menu_nav">
@@ -73,20 +83,33 @@
       </div>
       <div class="search_container">
         <section class="search">
-          <input class="order_input" placeholder="Order in Chaos" type="text">
-          <button class="src_btn">Search</button>
+          <input
+            id="order_input"
+            class="order_input"
+            placeholder="Order in Chaos"
+            type="text"
+          />
+          <button id="search_button" class="src_btn">Search</button>
         </section>
         <section class="slider">
-          <div class="silder_vectors">
+          <div id="silder_vectors" class="silder_vectors d-none">
             <div class="order_slider_arrow_left">
-              <img class="src_vector" src="../assest/images/search-page/vector2.svg" alt="vector">
+              <img
+                class="src_vector"
+                src="../assest/images/search-page/vector2.svg"
+                alt="vector"
+              />
             </div>
             <div class="order_slider_arrow_right">
-              <img class="src_vector" src="../assest/images/search-page/vector3.svg" alt="vector">
+              <img
+                class="src_vector"
+                src="../assest/images/search-page/vector3.svg"
+                alt="vector"
+              />
             </div>
           </div>
-          <div class="src_books_container">
-            <div class="src_books">
+          <div id="src_books_container" class="src_books_container">
+            <!-- <div class="src_books">
               <div>
                 <img src="../assest/images/search-page/book.svg" alt="book">
               </div>
@@ -104,7 +127,7 @@
                   basket, after selecting the delivery city
                 </p>
               </div>
-            </div>
+            </div> -->
           </div>
         </section>
       </div>
@@ -114,13 +137,13 @@
       <p class="social_media_title">Follow us on social media</p>
       <div class="social_media_icon_body">
         <a href="https://www.facebook.com/">
-          <img src="../assest/icons/social-media/facebook.svg" alt="">
+          <img src="../assest/icons/social-media/facebook.svg" alt="" />
         </a>
         <a href="https://twitter.com/">
-          <img src="../assest/icons/social-media/twitter.svg" alt="">
+          <img src="../assest/icons/social-media/twitter.svg" alt="" />
         </a>
         <a href="https://www.instagram.com/">
-          <img src="../assest/icons/social-media/instagram.svg" alt="">
+          <img src="../assest/icons/social-media/instagram.svg" alt="" />
         </a>
       </div>
     </div>
@@ -128,7 +151,7 @@
     <footer id="footer">
       <div class="footer-top">
         <div class="footer-logo">
-          <img src="../assest/icons/footer/logo/logo.svg" alt="">
+          <img src="../assest/icons/footer/logo/logo.svg" alt="" />
         </div>
 
         <div class="footer_nav">
@@ -170,6 +193,6 @@
 
     <script src="../assest/js/dom/hamburger-menu.js"></script>
     <script src="../assest/js/dom/modal.js"></script>
-  
-
-</body></html>
+    <script type="module" src="../assest/js/search/search.js"></script>
+  </body>
+</html>
