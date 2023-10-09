@@ -44,7 +44,7 @@ add_book_type.addEventListener('click', function (e) {
 
 function upperCase(str) {
     return str[0].toUpperCase() + str.slice(1);
-  }
+}
 
 add_type_button.addEventListener('click', function (e) {
     e.preventDefault();

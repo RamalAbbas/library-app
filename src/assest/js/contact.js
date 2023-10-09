@@ -94,7 +94,7 @@ onValue(contact, (snapshot) => {
     contact_tbody ? contact_tbody.innerHTML = contactItem  : null 
 });
 
-contactTextarea.addEventListener("input", function () {
+contactTextarea?.addEventListener("input", function () {
   letterCounter();
 });
 

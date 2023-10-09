@@ -1,37 +1,19 @@
-// const swiper = new Swiper(".swiper", {
-//     //   speed: 400,
-//     //   spaceBetween: 100,
-  
-//     direction: "horizontal",
-//     loop: true,
-//     speed: 800,
-//     slidesPerView: 2,
-//     slidesPerGroup: 1,
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//     scrollbar: {
-//       el: ".swiper-scrollbar",
-//       dragClass: "swiper-scrollbar-drag",
-//     },
-//     hideOnClick: false,
-//     delay: 2000,
-  
-//     centerInsufficientSlides: true,
-  
-//     //!   breakpoints
-  
-//     breakpoints: {
-//       375: {
-//         slidesPerView: 1,
-//       },
-//       558: {
-//         slidesPerView: 2,
-//       },
-//       992: {
-//         slidesPerView:5,
-//       },
-//     },
-//   });
-  
+let next1 = document.getElementById('next1');
+
+next1.addEventListener("click", function(){
+    const widthItem = document.querySelector('.item').offsetWidth;
+    document.getElementById('formList').scrollLeft += widthItem;
+})
+
+
+let prev1 = document.getElementById('prev1');
+
+prev1.addEventListener("click", function(){
+    const widthItem = document.querySelector('.item').offsetWidth;
+    document.getElementById('formList').scrollLeft -= widthItem;
+})
+
+
+// setInterval(() => {
+//     next1.click()
+// },3000);
