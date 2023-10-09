@@ -1,78 +1,63 @@
+.src-container {
+  padding-left: 13.44%;
+  padding-right: 5.31%;
+}
+.src_title {
+  margin-top: 134px;
+}
 .search_container {
   display: flex;
   justify-content: space-between;
-  align-items: self-start;
+  margin-top: 44px;
 }
 
 .search {
+  height: auto;
   display: flex;
   flex-direction: column;
-  margin-top: 207px;
-  margin-left: 215px;
   gap: 44px;
 }
+.order_input, .src_btn {
+  border-radius: 5px;
+  font-family: var(--font);
+  width: 433px;
+} 
 
-.search h1 {
+.src_title h1 {
   font-family: Montserrat;
   font-size: 36px;
-  font-style: normal;
   font-weight: 700;
-  color: #241400;
+  color: var(--fontColor);
 }
 
-.search div {
-  width: 433px;
-  height: 69.524px;
-  flex-shrink: 0;
-  border-radius: 5px;
-  border: 1px solid #cecece;
-  background: #fff;
-}
-
-.search div p {
-  margin-top: 19px;
-  margin-left: 27px;
-  font-family: Crimson Text;
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: #241400;
-}
-
-.search button {
-  width: 433px;
+.src_btn {
   height: 65px;
-  flex-shrink: 0;
-  border-radius: 5px;
   background: #e16a00;
-  border: 0;
-
   color: #fff;
   text-align: center;
-  font-family: Crimson Text;
   font-size: 30px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  border: 0;
 }
-
+.order_input {
+  height: 69.5px;
+  color: var(--fontColor);
+}
 .search button:hover {
   cursor: pointer;
 }
 
 .slider {
   position: relative;
-  max-width: 800px;
-  width: 100%;
-  margin-top: 293px;
-  margin-right: 59px;
+}
+.src_books {
+  max-width: 700px;
   display: flex;
-  gap: 37px;
-  flex-shrink: 0;
-  height: 504px;
+  min-height: 504px;
   background: #fff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  padding: 47px 56px 0 30px;
+  margin-left: 30px;
 }
 
 .order_slider_arrow_left {
@@ -82,7 +67,6 @@
   height: 100%;
   align-items: center;
 }
-
 .order_slider_arrow_right {
   position: absolute;
   right: -50px;
@@ -90,43 +74,29 @@
   height: 100%;
   align-items: center;
 }
-
-.slider img {
-  margin-top: 64px;
-  margin-left: 31px;
-  width: 220px;
-  height: 306px;
-}
-
 .writing {
   display: flex;
   flex-direction: column;
-  margin-top: 47px;
-  font-family: Montserrat;
-  color: #241400;
+  font-family: var(--fontMontserrat);
+  color: var(--fontColor);
+  line-height: 196.187%;
+  margin-left: 37px;
+
 }
 
-.writing h1 {
+.src_book_name {
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 196.187%;
 }
 
-.writing h2 {
+.writer_name {
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 196.187%;
 }
 
 .writing p {
-  color: #241400;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 196.187%;
-  /* 27.466px */
 }
 
 .social_medias {
