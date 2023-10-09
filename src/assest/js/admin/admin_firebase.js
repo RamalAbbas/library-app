@@ -24,7 +24,6 @@ let create_book_date = `${date.getFullYear()}:${date.getMonth()}:${date.getDay()
 // add book
 add_book_btn?.addEventListener('click',function(e){
     e.preventDefault()
-    console.log(globalData);
     let book = {
             book_id:globalData.id,
             book_name:book_name_input.value,
@@ -35,6 +34,7 @@ add_book_btn?.addEventListener('click',function(e){
             book_type:admin_dropdown_active_item.innerText,
             book_apperance:globalData.volumeInfo.publishedDate,
             book_date:create_book_date,
+
     }
     push(books,book)
     categoriesSorter(admin_dropdown_active_item.innerText)
@@ -79,14 +79,11 @@ function renderBook(){
         
         books_tbody.innerHTML = bookItem  
 
-
         let delete_item = document.querySelectorAll(".delete_item")
-        console.log(delete_item);
 
         delete_item.forEach((el) => el.addEventListener('click',function(){
             let id = el.dataset.id
             deleteBookDetail(id)
-            
         }))
     });
 }
@@ -165,7 +162,6 @@ function renderAbout(){
     });
 }
 renderAbout()
-
 
 function categoriesSorter(categories) {
     let arr = [];

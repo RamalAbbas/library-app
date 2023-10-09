@@ -37,6 +37,7 @@ join_btn?.addEventListener('click',function(e){
       push(users,userInformation)
       fullname_input.value = ""
       email_input.value = ""
+      modal_body.classList.remove("show")
     }
 
 })
@@ -126,7 +127,10 @@ let logout_button = document.querySelector("#logout_button")
 logout_button.addEventListener('click',function(){
     localStorage.removeItem("password")
     localStorage.removeItem("username")
+    document.querySelector("#login_container").style.display = "block"
+    document.querySelector("#admin_container").style.display = "none"
 })
+
 function showErrorMessage(message,isError) {
   const errorDiv = document.createElement("div");
   errorDiv.classList.add("error-div")

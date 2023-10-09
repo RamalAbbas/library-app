@@ -26,7 +26,7 @@ function renderCatalogTypes(){
         let catalogDataToArr = Object.entries(catalogData);
         let catalogItem = catalogDataToArr.map((item) => 
             `
-                <li id="catalog_book_type">${item[1].bookType}</li>
+                <li data-id="${item[0]}" id="catalog_book_type">${item[1].bookType}</li>
             `
         ).join("");
         
@@ -40,7 +40,7 @@ function renderCatalogTypes(){
 }
 renderCatalogTypes();
 
-let card_body_all= document.querySelector("#card_body_all")
+let card_body_all= document.querySelector("#formList")
 
 function renderBooks(){
     onValue(books, (snapshot) => {
@@ -49,7 +49,7 @@ function renderBooks(){
         globalBookArr = bookDataToArr
         let bookItem = bookDataToArr.map((item) => 
             `
-                    <div class="book-box">
+                    <div id="book_item" class="book-box item">
                         ${item[1].book_is_new ? `<div class="new_button">New</div>` : ``}
                         <div>
                             <img
@@ -62,13 +62,17 @@ function renderBooks(){
 
                         <div class="book-in-text1">${item[1].book_name}</div>
                         <div class="book-in-text2">${item[1].book_author}</div>
-                            <div id="read_more_button" data-id="${item[0]}" class="book-read-more">Read more</div>
-                        </div>
+                        <div id="read_more_button" data-id="${item[0]}" class="book-read-more">Read more</div>
+
                     </div>
             `
         ).join("");
         card_body_all.innerHTML = bookItem; 
-        
+        if(bookDataToArr.length >= 6){
+            document.querySelector("#slider1").classList.remove("slider_min_class")
+        }else{
+            document.querySelector("#slider1").classList.add("slider_min_class")
+        }
         let read_more_button = document.querySelectorAll("#read_more_button")
         read_more_button.forEach((item) => item.addEventListener('click',function(e){
             e.preventDefault()
@@ -76,6 +80,7 @@ function renderBooks(){
             window.location.href = `../pages/book.html#id=${book_id}`
         }))
     });
+
 }
 renderBooks()
 
@@ -83,7 +88,7 @@ let filterBookType = (arr,item) => {
     let resultBook = arr.filter((items) => items[1].book_type == item )
     let bookItem = resultBook.map((item) => 
         `
-                <div class="book-box">
+                <div class="book-box item">
                     ${item[1].book_is_new ? `<div class="new_button">New</div>` : ``}
                     <div>
                         <img
@@ -96,14 +101,22 @@ let filterBookType = (arr,item) => {
 
                     <div class="book-in-text1">${item[1].book_name}</div>
                     <div class="book-in-text2">${item[1].book_author}</div>
-                        <a data-id="${item[1].book_id}" href="../pages/book.html">
-                            <div  class="book-read-more">Read more</div>
-                        </a>
-                    </div>
+                        <div id="read_more_button" data-id="${item[0]}" class="book-read-more">Read more</div>
                 </div>
         `
     ).join("");
     card_body_all.innerHTML = bookItem;  
+    if(resultBook.length >= 6){
+        document.querySelector("#slider1").classList.remove("slider_min_class")
+    }else{
+        document.querySelector("#slider1").classList.add("slider_min_class")
+    }
+    let read_more_button = document.querySelectorAll("#read_more_button")
+        read_more_button.forEach((item) => item.addEventListener('click',function(e){
+            e.preventDefault()
+            let book_id = item.dataset.id
+            window.location.href = `../pages/book.html#id=${book_id}`
+        }))
 }
 
 // let card_body_new = document.querySelector("#card_body_new")

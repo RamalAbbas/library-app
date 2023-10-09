@@ -23,14 +23,14 @@ function renderCatalog(){
         let catalogDataToArr = Object.entries(catalogData);
         let catalogItem = catalogDataToArr.map((item) => 
             `
-                <div class="catalog-link">
+                <div id="book_category" data-id="${item[0]}" class="catalog-link">
                     <a href="">${item[1].bookType}</a>
                 </div>
             `
         ).join("");
         
         link_group.innerHTML = catalogItem;  
-
     });
 }
 renderCatalog();
+

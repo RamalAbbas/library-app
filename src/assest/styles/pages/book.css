@@ -220,3 +220,30 @@
     border-radius: 3px;
     align-items: center;
 }
+
+.BooksSlider{
+    position: relative;
+}
+
+.card_arrow_body{
+    width: 100%;
+    position: relative;
+}
+
+.card_prev_icon{
+    position: absolute;
+    left: -41px;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.card_next_icon{
+    z-index: 1;
+    position: absolute;
+    right: -63px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
