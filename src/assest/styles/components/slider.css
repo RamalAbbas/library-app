@@ -295,3 +295,16 @@
         display: none;
     }
 }
+
+#formList-search {
+    width: 1280px;
+    max-width: 100%;
+    overflow: auto;
+    margin: 50px auto 50px;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+
+#formList-search::-webkit-scrollbar {
+    display: none;
+}

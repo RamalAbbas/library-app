@@ -32,3 +32,4 @@ prev2.addEventListener("click", function(){
     const widthItem = document.querySelector('.item').offsetWidth;
     document.getElementById('formLista').scrollLeft -= widthItem;
 })
+
