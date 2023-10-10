@@ -198,7 +198,7 @@ main {
   max-width:400px;
   width: 100%;
   &&::-webkit-scrollbar{
-    background: transparent;
+    display: none;
   }
 }
 
@@ -232,4 +232,8 @@ main {
 
 #slider1.slider_min_class .direction{
       display: none;
+}
+
+.direction{
+  cursor: pointer;
 }
