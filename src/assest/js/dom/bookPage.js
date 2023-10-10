@@ -73,14 +73,16 @@ let renderBookPageDetails = () => {
                         <p class="book_name">${item[1].book_name}</p>
                         <p class="book_apperance">${daysAgo} Days Ago</p>
                         <p class="book_writer">${item[1].book_author}</p>
-                        <p class="book_description">
+                        <p class="book_description book_description_web">
                             ${item[1].book_description}
                         </p>
 
                         <form class="comment_form" action="">
                             <input class="comment_input" type="text" placeholder="your anonim comment...">
                             <button class="send_button">
-                                <img src="../assest/icons/bookpage/send.svg" alt=""></button>
+                                <img src="../assest/icons/bookpage/send.svg" alt="">
+                            </button>
+                                
                         </form>
 
                         <div class="comment_main">
