@@ -247,3 +247,8 @@
     transform: translate(-50%,-50%);
     cursor: pointer;
 }
+
+.book_description_web{
+    height: 272px;
+    overflow-y: scroll  ;
+}
