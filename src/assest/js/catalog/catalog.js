@@ -180,7 +180,7 @@ function renderNewBooks() {
       })
       .join("");
     card_body_new.innerHTML = bookItem;
-    if (bookDataToArr.length >= 6) {
+      if (bookDataToArr.length >= 6) {
         document.querySelector("#slider1").classList.remove("slider_min_class");
       } else {
         document.querySelector("#slider1").classList.add("slider_min_class");

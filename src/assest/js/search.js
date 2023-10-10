@@ -48,7 +48,7 @@ search_button.addEventListener('click', function(e){
             <div class="writing">
                 <h2 class="src_book_name">${item[1].book_name}</h2>
                 <h3 class="writer_name">${item[1].book_author}</h3>
-                 <p>
+                 <p class="bookDescription">
                     ${item[1].book_description}
                 </p>
             </div>

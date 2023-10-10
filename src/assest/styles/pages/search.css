@@ -1,3 +1,11 @@
+.slider.v-fit {
+  width: fit-content;
+}
+.bookDescription {
+  overflow-x:scroll ;
+  max-height: 238px;
+}
+
 .src-container {
   padding-left: 13.44%;
   padding-right: 5.31%;
@@ -17,11 +25,12 @@
   flex-direction: column;
   gap: 44px;
 }
-.order_input, .src_btn {
+.order_input,
+.src_btn {
   border-radius: 5px;
   font-family: var(--font);
   width: 433px;
-} 
+}
 
 .src_title h1 {
   font-family: Montserrat;
@@ -81,7 +90,6 @@
   color: var(--fontColor);
   line-height: 196.187%;
   margin-left: 37px;
-
 }
 
 .src_book_name {
