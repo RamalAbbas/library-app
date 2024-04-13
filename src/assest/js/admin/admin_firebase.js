@@ -34,13 +34,15 @@ add_book_btn?.addEventListener('click',function(e){
             book_type:admin_dropdown_active_item.innerText,
             book_apperance:globalData.volumeInfo.publishedDate,
             book_date:create_book_date,
-
+    }
+    let catalo = {
+        bookType: admin_dropdown_active_item.innerText
     }
     push(books,book)
+    push(catalog,catalo)
     categoriesSorter(admin_dropdown_active_item.innerText)
 })
 let id = 1;
-// read book
 function renderBook(){
     let books_tbody = document.querySelector("#books_tbody")
     onValue(books, (snapshot) => {
@@ -51,10 +53,10 @@ function renderBook(){
             books_tbody.classList.remove("d-none")
         }
         let bookDataToArr = Object.entries(bookData)
-        let bookItem = bookDataToArr.map((item) => 
+        let bookItem = bookDataToArr.map((item,index) => 
             `
                 <tr class="a">
-                    <td class="mobil-id">${id++}</td>
+                    <td class="mobil-id">${index+1}</td>
                     <td class="custom_td">
                         <img class="admin_book_img" src="${item[1].book_img_url}" alt="">
                         ${item[1].book_name}
