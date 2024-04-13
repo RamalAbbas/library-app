@@ -6,12 +6,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA0cVkqdtT7Sp5nmr-RYn1k4CeDeEQmeqM",
-  authDomain: "our-project-6d4a4.firebaseapp.com",
-  projectId: "our-project-6d4a4",
-  storageBucket: "our-project-6d4a4.appspot.com",
-  messagingSenderId: "805479077338",
-  appId: "1:805479077338:web:6c77c3377543c2e6ee9ce3",
+  apiKey: "AIzaSyD3HMmh8FzxCdO2KD_tHiBaJJsMrrk_04I",
+  authDomain: "library-app-70dbd.firebaseapp.com",
+  databaseURL: "https://library-app-70dbd-default-rtdb.firebaseio.com",
+  projectId: "library-app-70dbd",
+  storageBucket: "library-app-70dbd.appspot.com",
+  messagingSenderId: "262039424716",
+  appId: "1:262039424716:web:7c9204bea43337af8ebc69"
 };
 
 // Initialize Firebase
